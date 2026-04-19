@@ -1,0 +1,18 @@
+﻿# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+

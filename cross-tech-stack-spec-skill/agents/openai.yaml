@@ -1,0 +1,7 @@
+﻿interface:
+  display_name: "Cross-Tech Stack Spec"
+  short_description: "Opt-in analysis for mobile, H5, Python, and mixed-stack repos."
+  default_prompt: "Use $cross-tech-stack-spec-skill to extend project analysis across mobile, H5, Python, or mixed-stack codebases."
+
+policy:
+  allow_implicit_invocation: false
