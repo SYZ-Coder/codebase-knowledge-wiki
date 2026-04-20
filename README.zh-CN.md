@@ -32,6 +32,8 @@
 
 - [License](./LICENSE)
 - [安装指南](./references/installation-guide.zh-CN.md)
+- [从 `mydocs` 到项目中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
+- [中央知识库与 OpenSpec 协同规则](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
 
 同时也补充了面向其他 AI 开发工具的通用接入说明，只要工具支持规则、指令、prompt 或文档上下文，就可以按通用方式接入本仓库。
 
@@ -200,6 +202,8 @@
 
 - [团队标准使用顺序](./references/team-standard-workflow.zh-CN.md)
 - [全量完整模式](./references/full-analysis-mode.zh-CN.md)
+- [从 `mydocs` 到项目中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
+- [中央知识库与 OpenSpec 协同规则](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
 - [场景化命令合集](./references/scenario-command-recipes.zh-CN.md)
 - [按接口或功能查看完整链路](./references/full-chain-by-interface-or-feature.zh-CN.md)
 - [锚点选择表](./references/anchor-selection-guide.zh-CN.md)

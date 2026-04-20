@@ -38,6 +38,8 @@ This repository also includes skill-usage companion files:
 
 - [License](./LICENSE)
 - [Installation Guide](./references/installation-guide.md)
+- [From `mydocs` To A Central Knowledge Repository](./references/mydocs-to-central-knowledge-repo.md)
+- [Central Knowledge Repository And OpenSpec Collaboration](./references/knowledge-repo-and-openspec-collaboration.md)
 
 It also includes generic integration guidance for other AI development tools that support rules, instructions, prompts, or documentation context.
 
@@ -190,6 +192,8 @@ Note:
 
 - [Team Standard Workflow](./references/team-standard-workflow.md)
 - [Full Analysis Mode](./references/full-analysis-mode.md)
+- [From `mydocs` To A Central Knowledge Repository](./references/mydocs-to-central-knowledge-repo.md)
+- [Central Knowledge Repository And OpenSpec Collaboration](./references/knowledge-repo-and-openspec-collaboration.md)
 - [Scenario Command Recipes](./references/scenario-command-recipes.md)
 - [Trace A Full Chain From An Interface Or Feature](./references/full-chain-by-interface-or-feature.md)
 - [Anchor Selection Guide](./references/anchor-selection-guide.md)
@@ -213,6 +217,8 @@ Note:
 For Chinese readers, start here:
 
 - [Chinese Root README](./README.zh-CN.md)
+- [Chinese Guide: `mydocs` To Central Knowledge Repository](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
+- [Chinese Guide: Knowledge Repository And OpenSpec Collaboration](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
 - [Backend Skill Chinese Quick Start](./backend-service-spec-skill/references/quick-start.zh-CN.md)
 - [Backend Skill Chinese README](./backend-service-spec-skill/README.zh-CN.md)
 - [Extension Skill Chinese README](./cross-tech-stack-spec-skill/README.zh-CN.md)

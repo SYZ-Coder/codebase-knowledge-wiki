@@ -167,6 +167,11 @@ project/
   index/
 ```
 
+如果团队要把产物沉淀到中央知识库，建议继续阅读：
+
+- [从 `mydocs` 到项目中央知识库](../references/mydocs-to-central-knowledge-repo.zh-CN.md)
+- [中央知识库与 OpenSpec 协同规则](../references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
+
 ## 建议继续阅读
 
 - [快速上手](./references/quick-start.zh-CN.md)
@@ -191,4 +196,3 @@ project/
 
 - [扩展技能 README](../cross-tech-stack-spec-skill/README.zh-CN.md)
 - [扩展技能详细使用说明](../cross-tech-stack-spec-skill/references/extension-usage-guide.zh-CN.md)
-

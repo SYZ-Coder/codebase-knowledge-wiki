@@ -145,3 +145,12 @@ Treat this repository as:
 
 - a native skill install for Codex
 - a repository-based rule source for Claude, Cursor, VS Code, and similar AI development tools
+
+## 8. What To Do With Generated `mydocs/`
+
+After the skills generate analysis outputs, do not treat `mydocs/` as the final team knowledge destination.
+
+Recommended reading:
+
+- [From `mydocs` To A Central Knowledge Repository](./mydocs-to-central-knowledge-repo.md)
+- [Central Knowledge Repository And OpenSpec Collaboration](./knowledge-repo-and-openspec-collaboration.md)

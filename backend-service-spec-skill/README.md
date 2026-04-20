@@ -167,6 +167,11 @@ project/
   index/
 ```
 
+If the team uses a central knowledge repository, read next:
+
+- [From `mydocs` To A Central Knowledge Repository](../references/mydocs-to-central-knowledge-repo.md)
+- [Central Knowledge Repository And OpenSpec Collaboration](../references/knowledge-repo-and-openspec-collaboration.md)
+
 ## Read Next
 
 - [Quick Start](./references/quick-start.md)
@@ -191,4 +196,3 @@ Extension entry points:
 
 - [Extension README](../cross-tech-stack-spec-skill/README.md)
 - [Detailed Extension Usage Guide](../cross-tech-stack-spec-skill/references/extension-usage-guide.md)
-
