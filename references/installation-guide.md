@@ -154,3 +154,27 @@ Recommended reading:
 
 - [From `mydocs` To A Central Knowledge Repository](./mydocs-to-central-knowledge-repo.md)
 - [Central Knowledge Repository And OpenSpec Collaboration](./knowledge-repo-and-openspec-collaboration.md)
+
+Shortest practical flow:
+
+1. import the project `mydocs/` into the source layer of the central knowledge repository
+2. then recover stable content into `project/services/`, `project/domains/`, and `project/standards/`
+
+Copyable two-step wording:
+
+```text
+Please execute import_mydocs_to_sources:
+source_repo=<project-repo>
+source_docs=<path-to-mydocs>
+target_repo=<central-knowledge-repo>
+batch=<YYYY-MM-DD-workspace-or-topic>
+mode=safe
+```
+
+```text
+Please execute recover_sources_to_project:
+target_repo=<central-knowledge-repo>
+batch=<YYYY-MM-DD-workspace-or-topic>
+recover=services,domains,standards
+mode=guided
+```

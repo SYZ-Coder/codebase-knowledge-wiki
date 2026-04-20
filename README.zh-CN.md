@@ -37,6 +37,11 @@
 
 同时也补充了面向其他 AI 开发工具的通用接入说明，只要工具支持规则、指令、prompt 或文档上下文，就可以按通用方式接入本仓库。
 
+如果你最关心“技能产物怎么落到中央知识库”，最短路径是：
+
+1. 先看 [从 `mydocs` 到项目中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
+2. 再看 [中央知识库与 OpenSpec 协同规则](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
+
 ## 仓库结构
 
 ### 1. 服务端基础技能

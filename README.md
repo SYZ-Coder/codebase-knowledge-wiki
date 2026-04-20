@@ -43,6 +43,11 @@ This repository also includes skill-usage companion files:
 
 It also includes generic integration guidance for other AI development tools that support rules, instructions, prompts, or documentation context.
 
+If your main question is how skill outputs should land in a central knowledge repository, the shortest path is:
+
+1. read [From `mydocs` To A Central Knowledge Repository](./references/mydocs-to-central-knowledge-repo.md)
+2. then read [Central Knowledge Repository And OpenSpec Collaboration](./references/knowledge-repo-and-openspec-collaboration.md)
+
 ## Repository Layout
 
 ### 1. Backend Service Skill
