@@ -1,4 +1,4 @@
 interface:
-  display_name: "Project Spec"
+  display_name: "backend-service-spec-skill"
   short_description: "梳理跨服务总图、业务域、通信链路和单服务纵切知识"
   default_prompt: "默认使用这个技能来做旧系统、微服务和平台仓库的知识梳理。优先判断任务属于四类中的哪一类：跨服务 create_codemap、跨服务业务域梳理、crate_router_map、单服务纵切梳理。严格按代码事实输出，无法闭环验证的内容标注为线索级；域层负责上卷整理，不重复抄写服务页；跨服务链路必须区分同步调用、异步消息、配置性依赖和证据来源。"

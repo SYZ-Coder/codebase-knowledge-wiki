@@ -26,6 +26,131 @@
 请用 backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
+## 快速入口
+
+如果你是第一次接触这个仓库，建议按下面的顺序阅读：
+
+1. 先看本文档，了解仓库里有哪些技能、适用边界和常见命令入口。
+2. 如果你的目标是后端 / 微服务 / 旧系统梳理，继续看 [Backend Service Spec Skill 详细说明](./backend-service-spec-skill/README.zh-CN.md)。
+3. 如果你的项目是 App、H5、Python 或混合工作区，再继续看 [Cross Tech Stack Spec Skill 详细说明](./cross-tech-stack-spec-skill/README.zh-CN.md)。
+
+如果你只想先知道 `backend-service-spec-skill` 最常用的命令和用途，可以先看下面这张总览表，再决定是否进入子目录阅读全文。
+
+## `backend-service-spec-skill` 命令总览
+
+这是仓库里最常用的一套基础技能，适合后端系统、微服务系统、旧系统和平台型服务仓库。
+
+### 1. `create_codemap`
+
+适合什么时候用：
+
+- 你刚接手一个系统，想先看整体服务版图
+- 你还不确定应该优先深入哪些服务
+
+通常会产出：
+
+- 服务清单
+- 服务职责边界
+- 上下游依赖关系
+- 服务级总览图
+
+详细说明：
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [命令产物对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
+
+### 2. `service_deep_dive`
+
+适合什么时候用：
+
+- 你已经锁定了一个关键服务
+- 你要纵向梳理接口、模块、依赖、职责边界
+
+通常会产出：
+
+- 单服务结构页
+- 接口清单
+- 依赖关系页
+- 服务规范页
+
+详细说明：
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [快速上手](./backend-service-spec-skill/references/quick-start.zh-CN.md)
+
+### 3. `crate_router_map`
+
+适合什么时候用：
+
+- 你想追一条真实请求链路或消息链路
+- 你需要把同步调用、异步消息、补偿链路拆开看
+
+通常会产出：
+
+- 关键链路页
+- 同步 / 异步分段页
+- 闭环状态页
+
+详细说明：
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [命令速查表](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+
+### 4. `build_domain_map`
+
+适合什么时候用：
+
+- 你已经有了一些服务级事实，准备上升到业务域层面
+- 你要为团队中央知识库沉淀较稳定的结构化知识
+
+通常会产出：
+
+- 业务域页
+- 域到服务映射页
+- 域级规则页
+
+详细说明：
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [从 `mydocs` 到项目中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
+
+## 推荐阅读路径
+
+如果你只想快速使用：
+
+1. 看 [服务端技能快速上手](./backend-service-spec-skill/references/quick-start.zh-CN.md)
+2. 看 [服务端技能命令速查表](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+3. 按需回到 [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md) 看完整说明
+
+如果你想系统理解：
+
+1. 先读本文档
+2. 再读 [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+3. 再读 [服务端技能使用指南](./backend-service-spec-skill/references/usage-guide.md)
+4. 如果是混合栈项目，再读 [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.zh-CN.md)
+
+## 场景导航表
+
+如果你不确定该从哪个命令开始，可以先按场景选入口：
+
+| 你的场景 | 推荐命令 / 用法 | 先看哪里 |
+| --- | --- | --- |
+| 刚接手一个后端或微服务仓库，想先看全局 | `create_codemap` | [服务端技能 README](./backend-service-spec-skill/README.zh-CN.md) |
+| 已经锁定一个关键服务，想做纵向梳理 | `service_deep_dive` | [快速上手](./backend-service-spec-skill/references/quick-start.zh-CN.md) |
+| 想跟一条真实请求链路或消息链路 | `crate_router_map` | [命令速查表](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md) |
+| 想把多服务事实沉淀成业务域知识 | `build_domain_map` | [命令产物对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md) |
+| 项目是 App、H5、Python 或混合工作区 | `backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [扩展技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md) |
+| 想快速抄一条可直接发给 Codex 的提示词 | 直接复用根 README 里的“快速命令”区块 | [快速命令](#快速命令) |
+| 想系统掌握完整使用方法 | 先看根 README，再进子技能 README 与 usage guide | [推荐阅读路径](#推荐阅读路径) |
+
+## 一句话选型
+
+- 看整体版图：先用 `create_codemap`
+- 看单个关键服务：先用 `service_deep_dive`
+- 看跨服务真实链路：先用 `crate_router_map`
+- 看稳定业务域沉淀：最后用 `build_domain_map`
+- 看混合栈项目：以 `backend-service-spec-skill` 为主流程，再启用 `$cross-tech-stack-spec-skill`
+
 ## 开源配套文件
 
 当前仓库也补充了与技能使用直接相关的配套文档：

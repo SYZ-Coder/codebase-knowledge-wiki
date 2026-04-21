@@ -52,12 +52,60 @@
 - 梳理服务清单、职责边界、依赖关系、上下游角色
 - 为后续 deeper docs 提供索引层
 
+如何使用：
+
+- 当你刚接手一个系统，还不知道有哪些核心服务、网关、任务、公共组件时，先从它开始
+- `scope` 一般写系统名、服务组名，或者你当前确认的工作区范围
+- `goal` 一般写“梳理服务版图”“识别高价值服务”“为后续 deep dive 建索引”等目标
+
+具体案例：
+
+```text
+请用 backend-service-spec-skill 对这个支付中台项目执行 create_codemap。
+要求：
+1. scope=payment-platform
+2. mode=service_landscape
+3. 先识别服务清单、网关入口、定时任务、消息消费者
+4. 输出服务职责边界、上下游依赖和高价值服务候选
+5. 严格按代码事实输出，无法闭环验证的内容标注为线索级
+```
+
+你通常会在这种场景下用它：
+
+- 第一次接手项目
+- 要做系统全景梳理
+- 想决定下一步先 deep dive 哪几个服务
+
 ### 2. `build_domain_map`
 
 作用：
 
 - 把服务级事实提升为“域 -> 服务 -> 规范”三层知识
 - 适合团队中央仓库长期沉淀
+
+如何使用：
+
+- 当你已经有了 `create_codemap` 和若干 `service_deep_dive` 结果，再做这个最稳妥
+- `scope` 一般写系统、服务组或某条业务线
+- `goal` 一般写“按业务域归档”“沉淀中央知识库结构”“输出域级规范页”
+
+具体案例：
+
+```text
+请用 backend-service-spec-skill 对订单履约系统执行 build_domain_map。
+要求：
+1. scope=order-fulfillment
+2. 基于现有 codemap 和关键服务 deep dive 结果
+3. 输出 domain -> service -> rules/specs 三层映射
+4. 区分交易域、履约域、售后域、通知域
+5. 不重复抄写服务页，只做上卷整理和归档
+```
+
+你通常会在这种场景下用它：
+
+- 项目梳理已经做了一轮，准备沉淀知识库
+- 团队想统一业务域边界
+- 想做“域 -> 服务 -> 规范”的长期维护页
 
 ### 3. `crate_router_map`
 
@@ -70,12 +118,81 @@
 
 - `create_router_map`
 
+如何使用：
+
+- 当你已经知道某个入口接口、业务动作或消息主题，想追完整链路时使用
+- `scope` 一般写入口 API、业务动作、topic、callback 名称，或者一条关键业务链
+- `goal` 一般写“追订单提交流程”“梳理退款异步链路”“分析登录鉴权链路”
+
+具体案例：
+
+```text
+请用 backend-service-spec-skill 对“用户提交订单”这条链路执行 crate_router_map。
+要求：
+1. scope=create-order
+2. 从网关入口开始追踪到订单服务、库存服务、优惠服务、MQ 投递和支付预创建
+3. 明确区分同步调用、异步消息、补偿任务
+4. 输出每一跳的代码位置、调用方式、证据来源和闭环状态
+5. 对缺失证据的环节标注未闭环
+```
+
+你通常会在这种场景下用它：
+
+- 出问题后追一条真实链路
+- 做接口联调或故障排查
+- 想把同步和异步路径拆开看清楚
+
 ### 4. `service_deep_dive`
 
 作用：
 
 - 对单个高价值服务做纵切梳理
 - 为后续业务域梳理提供稳定事实基础
+
+如何使用：
+
+- 当你已经通过 `create_codemap` 确认了某个关键服务值得深入时，就用它
+- `scope` 一般直接写服务名、模块名或仓库中的单个子服务
+- `goal` 一般写“梳理接口与模块分层”“分析依赖边界”“沉淀服务规范”
+
+具体案例：
+
+```text
+请用 backend-service-spec-skill 对 order-service 执行 service_deep_dive。
+要求：
+1. scope=order-service
+2. 梳理 controller / application / domain / infrastructure 分层
+3. 输出核心接口、主要依赖、数据库访问入口、消息生产与消费点
+4. 标出它对库存、支付、营销的调用关系
+5. 严格区分代码事实、推断结论和待验证线索
+```
+
+你通常会在这种场景下用它：
+
+- 某个服务是全链路关键节点
+- 你要做重构、交接或风险评估
+- 你后面还要做业务域页，需要先有稳定的服务页基础
+
+## 四个功能怎么组合使用
+
+最常见的组合顺序是：
+
+1. 先用 `create_codemap` 看全局
+2. 再用 `service_deep_dive` 深挖关键服务
+3. 再用 `crate_router_map` 追关键业务链路
+4. 最后用 `build_domain_map` 做域级沉淀
+
+一个完整案例：
+
+```text
+请用 backend-service-spec-skill 对这个电商后端项目做一轮结构化梳理。
+要求：
+1. 先执行 create_codemap，识别核心服务与上下游关系
+2. 再对 order-service 和 payment-service 执行 service_deep_dive
+3. 再对“提交订单”和“支付回调”执行 crate_router_map
+4. 最后输出 build_domain_map，把事实整理为交易域、履约域、支付域、售后域
+5. 所有输出严格以代码证据为准
+```
 
 ## 最常用命令
 

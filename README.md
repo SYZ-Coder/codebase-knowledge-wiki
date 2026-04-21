@@ -32,6 +32,131 @@ For example:
 Use backend-service-spec-skill to analyze this backend microservice project.
 ```
 
+## Quick Start Here
+
+If this is your first time in the repository, use this root README as the entry guide:
+
+1. Read this file to understand the two skills, their boundaries, and the common entry prompts.
+2. If your target is a backend, microservice, legacy system, or platform service repository, continue with the [Backend Service Spec Skill README](./backend-service-spec-skill/README.md).
+3. If your target is mobile, H5, Python, or a mixed-stack workspace, continue with the [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.md).
+
+If you mainly want to know what `backend-service-spec-skill` can do before reading the full child README, start with the command overview below.
+
+## `backend-service-spec-skill` At A Glance
+
+This is the primary skill in the repository for backend systems, microservice landscapes, legacy codebases, and platform-style service repositories.
+
+### 1. `create_codemap`
+
+Use it when:
+
+- you need a first-pass service landscape
+- you want to identify which services deserve deeper analysis next
+
+Typical outputs:
+
+- service inventory
+- service boundaries
+- upstream/downstream dependencies
+- service-landscape overview pages
+
+Read more:
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.md)
+- [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.md)
+
+### 2. `service_deep_dive`
+
+Use it when:
+
+- you have identified a high-value service
+- you want a vertical analysis of modules, interfaces, dependencies, and responsibilities
+
+Typical outputs:
+
+- single-service structure pages
+- interface inventory
+- dependency pages
+- service rule or convention pages
+
+Read more:
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.md)
+- [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.md)
+
+### 3. `crate_router_map`
+
+Use it when:
+
+- you want to trace a real request chain or message chain
+- you need to separate sync calls, async messaging, compensation, and real-time channels
+
+Typical outputs:
+
+- key route-chain pages
+- sync/async split views
+- closure-status pages
+
+Read more:
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.md)
+- [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.md)
+
+### 4. `build_domain_map`
+
+Use it when:
+
+- you already have service-level facts and want to consolidate them into domain-level knowledge
+- you are preparing long-lived artifacts for a central knowledge repository
+
+Typical outputs:
+
+- business-domain pages
+- domain-to-service mapping pages
+- domain-level rule pages
+
+Read more:
+
+- [Backend Service Spec Skill README](./backend-service-spec-skill/README.md)
+- [From `mydocs` To A Central Knowledge Repository](./references/mydocs-to-central-knowledge-repo.md)
+
+## Suggested Reading Path
+
+If you want the shortest path to first use:
+
+1. Read [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.md)
+2. Read [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.md)
+3. Return to the [Backend Service Spec Skill README](./backend-service-spec-skill/README.md) for the complete explanation
+
+If you want the full picture:
+
+1. Read this root README first
+2. Then read the [Backend Service Spec Skill README](./backend-service-spec-skill/README.md)
+3. Then read the [Backend Skill Usage Guide](./backend-service-spec-skill/references/usage-guide.md)
+4. If the project is mixed-stack, continue with the [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.md)
+
+## Scenario Navigation Table
+
+If you are unsure where to start, choose an entry point by scenario:
+
+| Your scenario | Recommended command / usage | Read first |
+| --- | --- | --- |
+| You just inherited a backend or microservice repository and need the global picture | `create_codemap` | [Backend Service Spec Skill README](./backend-service-spec-skill/README.md) |
+| You already know a high-value service and want a vertical analysis | `service_deep_dive` | [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.md) |
+| You want to trace a real request chain or message chain | `crate_router_map` | [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.md) |
+| You want to consolidate service facts into business-domain knowledge | `build_domain_map` | [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.md) |
+| The project is mobile, H5, Python, or mixed-stack | `backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.md) |
+| You want a ready-to-send prompt for Codex | reuse the examples in the root README quick-command section | [Quick Commands](#quick-commands) |
+| You want the full workflow and supporting documents | read the root README first, then the child README and usage guide | [Suggested Reading Path](#suggested-reading-path) |
+
+## One-Line Selection Guide
+
+- For the overall service landscape: start with `create_codemap`
+- For one important service: start with `service_deep_dive`
+- For a real cross-service chain: start with `crate_router_map`
+- For long-lived domain knowledge: finish with `build_domain_map`
+- For mixed-stack projects: use `backend-service-spec-skill` as the base workflow and enable `$cross-tech-stack-spec-skill`
+
 ## Open-Source Files
 
 This repository also includes skill-usage companion files:
