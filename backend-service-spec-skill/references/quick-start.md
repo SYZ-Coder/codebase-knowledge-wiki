@@ -22,11 +22,11 @@ Even though the directory name is now:
 
 - `backend-service-spec-skill`
 
-The actual invocation name is still:
+The actual invocation name is:
 
-- `backend-service-spec-skill`
+- `$backend-service-spec-skill`
 
-Users should still type `backend-service-spec-skill` in commands.
+Users should still type `$backend-service-spec-skill` in commands.
 
 ## 3. Four Core Functions
 
@@ -119,4 +119,3 @@ See the full mapping here:
 - [Quality Checklist](./quality-checklist.md)
 - [Output Templates](./output-templates.md)
 - [Workspace Classification](./workspace-classification.md)
-

@@ -40,11 +40,11 @@
 示例：
 
 ```text
-请用 backend-service-spec-skill 梳理这个后端微服务项目。
+请用 $backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 ## 3. Claude Code / Claude

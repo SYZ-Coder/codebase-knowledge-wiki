@@ -13,7 +13,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 默认增强产物：

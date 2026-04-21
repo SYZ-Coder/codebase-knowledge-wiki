@@ -16,7 +16,7 @@
 
 ## 2. 与基础技能的关系
 
-### 基础技能：`backend-service-spec-skill`
+### 基础技能：`$backend-service-spec-skill`
 
 继续作为默认主流程，适用于：
 
@@ -26,7 +26,7 @@
 - 以服务到服务通信为中心的 router-map
 - 团队中央仓库长期维护
 
-### 扩展技能：`cross-tech-stack-spec-skill`
+### 扩展技能：`$cross-tech-stack-spec-skill`
 
 只在需要跨技术栈适配时显式启用。
 
@@ -61,7 +61,7 @@
 
 ## 4. 什么时候只用基础技能
 
-以下情况直接用 `backend-service-spec-skill` 即可：
+以下情况直接用 `$backend-service-spec-skill` 即可：
 
 - 仓库本身就是普通后端微服务或服务家族
 - 用“服务”这个概念已经足够描述项目
@@ -69,7 +69,7 @@
 
 ## 5. 什么时候启用扩展技能
 
-以下情况建议启用 `cross-tech-stack-spec-skill`：
+以下情况建议启用 `$cross-tech-stack-spec-skill`：
 
 - 用户明确要求开启跨技术栈扩展
 - 仓库以移动端为主
@@ -83,7 +83,7 @@
 ### 方式 A：只用基础技能
 
 ```text
-请用 backend-service-spec-skill 梳理这个后端微服务项目。
+请用 $backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
 ### 方式 B：显式只开扩展技能
@@ -95,7 +95,7 @@
 ### 方式 C：基础主流程 + 扩展层
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 对于混合场景，这种说法最准确。
@@ -141,31 +141,31 @@
 ### 混合栈链路
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，追踪 page -> api -> callback -> task 这条跨层链路。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，追踪 page -> api -> callback -> task 这条跨层链路。
 ```
 
 ### 大型混合工作区
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，先输出工作区分层页，再记录当前排除项，然后继续做 codemap 和 router-map。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，先输出工作区分层页，再记录当前排除项，然后继续做 codemap 和 router-map。
 ```
 
 ### 接口对照页
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，输出前端请求声明到后端处理路由的接口对照页，并附代码位置与证据等级。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，输出前端请求声明到后端处理路由的接口对照页，并附代码位置与证据等级。
 ```
 
 ### 混合栈业务域页
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，在已有 codemap 和 router-map 基础上，输出某业务域的 domain -> entry surfaces -> systems/modules -> rules/specs 页。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，在已有 codemap 和 router-map 基础上，输出某业务域的 domain -> entry surfaces -> systems/modules -> rules/specs 页。
 ```
 
 ### 增量更新
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，按 update_codemap 模式，只更新本次变更范围涉及的 codemap / router-map / domain-map，并列出受影响文档。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，按 update_codemap 模式，只更新本次变更范围涉及的 codemap / router-map / domain-map，并列出受影响文档。
 ```
 
 ## 9. 默认启用规则
@@ -270,4 +270,3 @@
 - 明确说明本次未重新验证的区域
 
 这样更适合中央知识库长期维护，也更符合事实边界。
-

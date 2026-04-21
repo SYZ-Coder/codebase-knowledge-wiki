@@ -15,7 +15,7 @@
 也就是说，用户在使用时，仍然应该写：
 
 ```text
-请用 backend-service-spec-skill 梳理这个后端微服务项目。
+请用 $backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
 而不是写目录名。
@@ -61,7 +61,7 @@
 具体案例：
 
 ```text
-请用 backend-service-spec-skill 对这个支付中台项目执行 create_codemap。
+请用 $backend-service-spec-skill 对这个支付中台项目执行 create_codemap。
 要求：
 1. scope=payment-platform
 2. mode=service_landscape
@@ -92,7 +92,7 @@
 具体案例：
 
 ```text
-请用 backend-service-spec-skill 对订单履约系统执行 build_domain_map。
+请用 $backend-service-spec-skill 对订单履约系统执行 build_domain_map。
 要求：
 1. scope=order-fulfillment
 2. 基于现有 codemap 和关键服务 deep dive 结果
@@ -127,7 +127,7 @@
 具体案例：
 
 ```text
-请用 backend-service-spec-skill 对“用户提交订单”这条链路执行 crate_router_map。
+请用 $backend-service-spec-skill 对“用户提交订单”这条链路执行 crate_router_map。
 要求：
 1. scope=create-order
 2. 从网关入口开始追踪到订单服务、库存服务、优惠服务、MQ 投递和支付预创建
@@ -158,7 +158,7 @@
 具体案例：
 
 ```text
-请用 backend-service-spec-skill 对 order-service 执行 service_deep_dive。
+请用 $backend-service-spec-skill 对 order-service 执行 service_deep_dive。
 要求：
 1. scope=order-service
 2. 梳理 controller / application / domain / infrastructure 分层
@@ -185,7 +185,7 @@
 一个完整案例：
 
 ```text
-请用 backend-service-spec-skill 对这个电商后端项目做一轮结构化梳理。
+请用 $backend-service-spec-skill 对这个电商后端项目做一轮结构化梳理。
 要求：
 1. 先执行 create_codemap，识别核心服务与上下游关系
 2. 再对 order-service 和 payment-service 执行 service_deep_dive
@@ -300,7 +300,7 @@ mydocs/
 如果项目是明显的混合工作区，建议使用：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 扩展技能入口：

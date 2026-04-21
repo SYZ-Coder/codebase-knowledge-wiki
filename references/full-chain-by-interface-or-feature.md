@@ -21,7 +21,7 @@ It is:
 
 The most reliable way is therefore:
 
-- use `backend-service-spec-skill` as the base workflow
+- use `$backend-service-spec-skill` as the base workflow
 - enable `$cross-tech-stack-spec-skill`
 - turn on selected optional switches
 
@@ -31,7 +31,7 @@ The most reliable way is therefore:
 
 Good for getting the main route first:
 
-- `backend-service-spec-skill`
+- `$backend-service-spec-skill`
 - `$cross-tech-stack-spec-skill`
 - `enable_contract_map`
 - `enable_gateway_map`
@@ -72,7 +72,7 @@ Use this when you already know:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_async_contract_map + enable_external_dependency_dossier
 to build a full-chain analysis around interface <path / method / controller method>.
 Requirements:
@@ -96,7 +96,7 @@ Use this when you already know:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets
 to build a full-chain analysis around feature <feature name>.
 Requirements:

@@ -74,7 +74,7 @@ Use $cross-tech-stack-spec-skill to analyze this project.
 This is the most recommended wording for mixed workspaces.
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 ### Base workflow plus extension skill plus optional switches
@@ -82,7 +82,7 @@ Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stac
 Use this when you already know you need deeper analysis.
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for deeper analysis of this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for deeper analysis of this flow.
 ```
 
 ## 5. Quick Start
@@ -97,7 +97,7 @@ If this is your first time using the extension skill, a good sequence is:
 Recommended starting command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and first produce workspace layering, codemap, and router-map based strictly on repository evidence.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and first produce workspace layering, codemap, and router-map based strictly on repository evidence.
 ```
 
 Typical outputs:
@@ -139,7 +139,7 @@ Use full enablement only when:
 ### Recommended full-enable command
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced project analysis based strictly on code evidence.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced project analysis based strictly on code evidence.
 ```
 
 ### Recommended output order when fully enabled
@@ -194,7 +194,7 @@ Recommended switches:
 - `enable_interface_verification_assets`
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage + enable_interface_verification_assets for this integration flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage + enable_interface_verification_assets for this integration flow.
 ```
 
 ### Gateway/BFF routing confusion
@@ -205,7 +205,7 @@ Recommended switches:
 - `enable_context_propagation_map`
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_gateway_map + enable_context_propagation_map for this request chain.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_gateway_map + enable_context_propagation_map for this request chain.
 ```
 
 ### Production-failure troubleshooting
@@ -217,7 +217,7 @@ Recommended switches:
 - `enable_async_contract_map`
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics + enable_context_propagation_map + enable_async_contract_map for this failure path.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics + enable_context_propagation_map + enable_async_contract_map for this failure path.
 ```
 
 ### Kafka / MQ / callback systems
@@ -228,7 +228,7 @@ Recommended switches:
 - `enable_error_semantics`
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map + enable_error_semantics for this async flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map + enable_error_semantics for this async flow.
 ```
 
 ### Central knowledge repository / dependency governance
@@ -240,7 +240,7 @@ Recommended switches:
 - `enable_contract_map`
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier + enable_interface_verification_assets + enable_contract_map for knowledge-repository-oriented analysis.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier + enable_interface_verification_assets + enable_contract_map for knowledge-repository-oriented analysis.
 ```
 
 ## 8. What Each Switch Is For
@@ -332,19 +332,19 @@ These boundaries always apply:
 ### Minimal main workflow
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 ### Minimal fully enabled workflow
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced analysis.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced analysis.
 ```
 
 ### Minimal partial-enable workflow
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for deeper analysis of the target flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for deeper analysis of the target flow.
 ```
 
 ## 13. Read Next
@@ -353,8 +353,6 @@ Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-sp
 - [Usage And Differences](./usage-and-differences.md)
 - [Optional Switch-Controlled Extensions](./optional-switch-controlled-extensions.md)
 - [High-Priority Optional Switch Templates](./priority-switch-templates.md)
-
-
 
 
 

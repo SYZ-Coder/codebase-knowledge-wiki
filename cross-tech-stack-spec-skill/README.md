@@ -15,14 +15,14 @@ This skill does not replace the base `backend-service-spec-skill`.
 It is an opt-in extension.
 
 For normal backend microservice analysis, keep using the base skill.
-For mixed-stack or non-backend-first projects, explicitly enable this skill.
+For mixed-stack or non-backend-first projects, explicitly enable `$cross-tech-stack-spec-skill`.
 
 ## How To Use
 
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 For a pure mobile / H5 / Python repo, you can also say:
@@ -92,4 +92,3 @@ See the full mapping here:
 - [Communication Matrix Guidelines](./references/communication-matrix-guidelines.md)
 - [Communication Evidence Levels](./references/communication-evidence-levels.md)
 - [Upgrade Roadmap](./references/upgrade-roadmap.md)
-

@@ -15,14 +15,14 @@
 它是一个需要显式开启的扩展层。
 
 普通后端微服务项目，继续使用基础技能即可。
-如果是混合栈项目或非后端优先项目，再显式启用这个技能。
+如果是混合栈项目或非后端优先项目，再显式启用 `$cross-tech-stack-spec-skill`。
 
 ## 如何使用
 
 最推荐的表达方式：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 如果是纯移动端 / H5 / Python 项目，也可以直接说：
@@ -113,4 +113,3 @@
 - [Communication Matrix Guidelines](./references/communication-matrix-guidelines.md)
 - [通信证据等级](./references/communication-evidence-levels.md)
 - [升级清单](./references/upgrade-roadmap.zh-CN.md)
-

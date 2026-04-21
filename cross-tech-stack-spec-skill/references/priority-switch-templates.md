@@ -23,7 +23,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map for this interface flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map for this interface flow.
 ```
 
 Expected output focus:
@@ -48,7 +48,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_gateway_map for this request chain.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_gateway_map for this request chain.
 ```
 
 Expected output focus:
@@ -73,7 +73,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_field_lineage for critical field tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_field_lineage for critical field tracing in this flow.
 ```
 
 Expected output focus:
@@ -98,7 +98,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_context_propagation_map for auth and context propagation tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_context_propagation_map for auth and context propagation tracing in this flow.
 ```
 
 Expected output focus:
@@ -123,7 +123,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics for failure semantics tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics for failure semantics tracing in this flow.
 ```
 
 Expected output focus:
@@ -148,7 +148,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map for async contract tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map for async contract tracing in this flow.
 ```
 
 Expected output focus:
@@ -173,7 +173,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier for cross-team and third-party dependency capture.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier for cross-team and third-party dependency capture.
 ```
 
 Expected output focus:
@@ -198,7 +198,7 @@ Template:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_interface_verification_assets for verification-asset tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_interface_verification_assets for verification-asset tracing in this flow.
 ```
 
 Expected output focus:
@@ -213,4 +213,3 @@ Expected output focus:
 Do not enable these switches implicitly.
 
 If the user does not explicitly request them, keep the default outputs unchanged.
-

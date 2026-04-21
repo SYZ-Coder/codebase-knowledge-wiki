@@ -74,7 +74,7 @@
 适用于混合工作区，也是最推荐的写法。
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 ### 基础主流程 + 扩展技能 + 可选开关
@@ -82,7 +82,7 @@
 适用于你已经知道还要更细一层分析的时候。
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对这条链路做细粒度梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对这条链路做细粒度梳理。
 ```
 
 ## 5. 团队标准流程
@@ -105,7 +105,7 @@
 推荐起手命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，先做工作区分层、codemap、router-map，并严格按代码证据输出。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，先做工作区分层、codemap、router-map，并严格按代码证据输出。
 ```
 
 对应常见产物：
@@ -147,7 +147,7 @@
 ### 全开推荐命令
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对该项目做完整增强梳理，并严格按代码证据输出。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对该项目做完整增强梳理，并严格按代码证据输出。
 ```
 
 ### 全开时的建议输出顺序
@@ -204,7 +204,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage + enable_interface_verification_assets，对这条联调链路做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage + enable_interface_verification_assets，对这条联调链路做细化梳理。
 ```
 
 ### 网关/BFF 路由不清晰
@@ -217,7 +217,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_gateway_map + enable_context_propagation_map，对这条请求链路做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_gateway_map + enable_context_propagation_map，对这条请求链路做细化梳理。
 ```
 
 ### 线上故障/失败链路排查
@@ -231,7 +231,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics + enable_context_propagation_map + enable_async_contract_map，对这条故障链路做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics + enable_context_propagation_map + enable_async_contract_map，对这条故障链路做细化梳理。
 ```
 
 ### Kafka / MQ / callback 系统
@@ -244,7 +244,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map + enable_error_semantics，对这条异步链路做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map + enable_error_semantics，对这条异步链路做细化梳理。
 ```
 
 ### 中央知识库 / 依赖治理
@@ -258,7 +258,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier + enable_interface_verification_assets + enable_contract_map，对该项目做知识库型梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier + enable_interface_verification_assets + enable_contract_map，对该项目做知识库型梳理。
 ```
 
 ## 9. 8 个可选开关分别怎么用
@@ -350,19 +350,19 @@
 ### 最简主流程
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 ### 最简全开
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对项目做完整增强梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对项目做完整增强梳理。
 ```
 
 ### 最简部分开启
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对目标链路做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对目标链路做细化梳理。
 ```
 
 ## 13. 建议继续阅读
@@ -371,8 +371,6 @@
 - [用法与区别说明](./usage-and-differences.zh-CN.md)
 - [可选开关式接口扩展](./optional-switch-controlled-extensions.zh-CN.md)
 - [高优先级可选开关模板](./priority-switch-templates.zh-CN.md)
-
-
 
 
 

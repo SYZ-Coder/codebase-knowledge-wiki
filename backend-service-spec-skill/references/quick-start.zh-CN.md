@@ -22,11 +22,11 @@
 
 - `backend-service-spec-skill`
 
-但实际调用名仍然是：
+但实际调用名是：
 
-- `backend-service-spec-skill`
+- `$backend-service-spec-skill`
 
-用户下命令时，仍然写 `backend-service-spec-skill`。
+用户下命令时，仍然写 `$backend-service-spec-skill`。
 
 ## 3. 四个核心功能
 
@@ -119,4 +119,3 @@ build_domain_map: scope=<system>, goal=<输出域 -> 服务 -> 规范>
 - [质量清单](./quality-checklist.md)
 - [输出模板](./output-templates.md)
 - [工作区范围识别](./workspace-classification.md)
-

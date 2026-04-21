@@ -38,7 +38,7 @@ Best for questions like:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_async_contract_map + enable_external_dependency_dossier
 to build a full-chain analysis around interface <path / method / controller method>, strictly grounded in code facts.
 ```
@@ -69,7 +69,7 @@ Best for questions like:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets
 to build a full-chain analysis around feature <feature name>, strictly grounded in code facts.
 ```
@@ -102,7 +102,7 @@ Best for questions like:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_async_contract_map + enable_error_semantics + enable_external_dependency_dossier
 to build a full-chain analysis around topic <topic name>.
 Requirements:
@@ -138,7 +138,7 @@ Best for questions like:
 Recommended command:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_context_propagation_map + enable_interface_verification_assets
 to build a full-chain analysis around page entry <page path / app route / component name>, strictly grounded in code facts.
 ```

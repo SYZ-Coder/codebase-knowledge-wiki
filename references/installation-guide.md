@@ -40,11 +40,11 @@ Suggested steps:
 Example:
 
 ```text
-Use backend-service-spec-skill to analyze this backend microservice project.
+Use $backend-service-spec-skill to analyze this backend microservice project.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 ## 3. Claude Code / Claude

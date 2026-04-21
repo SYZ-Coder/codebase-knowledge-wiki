@@ -203,27 +203,27 @@
 示例：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对这条集成链路做细粒度梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_field_lineage，对这条集成链路做细粒度梳理。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_context_propagation_map，对这条链路中的鉴权与上下文透传做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_context_propagation_map，对这条链路中的鉴权与上下文透传做细化梳理。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics，对这条链路中的失败语义与错误处理做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics，对这条链路中的失败语义与错误处理做细化梳理。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map，对这条异步链路的契约与处理规则做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map，对这条异步链路的契约与处理规则做细化梳理。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier，对跨团队与第三方依赖做档案化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier，对跨团队与第三方依赖做档案化梳理。
 ```
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_interface_verification_assets，对这条链路相关的验证资产做梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_interface_verification_assets，对这条链路相关的验证资产做梳理。
 ```
 
 ## 5. 安全边界
@@ -264,4 +264,3 @@
 6. `enable_async_contract_map`
 7. `enable_external_dependency_dossier`
 8. `enable_interface_verification_assets`
-

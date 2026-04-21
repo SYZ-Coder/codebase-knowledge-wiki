@@ -29,7 +29,7 @@ That means users should now invoke the base skill directly by its current formal
 For example:
 
 ```text
-Use backend-service-spec-skill to analyze this backend microservice project.
+Use $backend-service-spec-skill to analyze this backend microservice project.
 ```
 
 ## Quick Start Here
@@ -145,7 +145,7 @@ If you are unsure where to start, choose an entry point by scenario:
 | You already know a high-value service and want a vertical analysis | `service_deep_dive` | [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.md) |
 | You want to trace a real request chain or message chain | `crate_router_map` | [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.md) |
 | You want to consolidate service facts into business-domain knowledge | `build_domain_map` | [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.md) |
-| The project is mobile, H5, Python, or mixed-stack | `backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.md) |
+| The project is mobile, H5, Python, or mixed-stack | `$backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.md) |
 | You want a ready-to-send prompt for Codex | reuse the examples in the root README quick-command section | [Quick Commands](#quick-commands) |
 | You want the full workflow and supporting documents | read the root README first, then the child README and usage guide | [Suggested Reading Path](#suggested-reading-path) |
 
@@ -155,7 +155,7 @@ If you are unsure where to start, choose an entry point by scenario:
 - For one important service: start with `service_deep_dive`
 - For a real cross-service chain: start with `crate_router_map`
 - For long-lived domain knowledge: finish with `build_domain_map`
-- For mixed-stack projects: use `backend-service-spec-skill` as the base workflow and enable `$cross-tech-stack-spec-skill`
+- For mixed-stack projects: use `$backend-service-spec-skill` as the base workflow and enable `$cross-tech-stack-spec-skill`
 
 ## Open-Source Files
 
@@ -230,13 +230,13 @@ Read next:
 
 ## How To Choose
 
-### Use only `backend-service-spec-skill` when:
+### Use only `$backend-service-spec-skill` when:
 
 - the repository is mainly backend or microservice oriented
 - service-level language is still accurate enough
 - cross-stack adaptation is not needed
 
-### Use `cross-tech-stack-spec-skill` when:
+### Use `$cross-tech-stack-spec-skill` when:
 
 - the repository is mobile-first, H5-first, Python-first, or mixed-stack
 - interface and router analysis must cross frontend, gateway, backend, MQ, callback, or task layers
@@ -250,7 +250,7 @@ Read next:
 Recommended wording:
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 ## Quick Commands
@@ -258,13 +258,13 @@ Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stac
 ### Backend skill only
 
 ```text
-Use backend-service-spec-skill to analyze this backend microservice project.
+Use $backend-service-spec-skill to analyze this backend microservice project.
 ```
 
 ### Backend lightweight full
 
 ```text
-Use backend-service-spec-skill to run a lightweight full analysis on this backend microservice project.
+Use $backend-service-spec-skill to run a lightweight full analysis on this backend microservice project.
 Requirements:
 1. classify project scope first
 2. run create_codemap
@@ -276,7 +276,7 @@ Requirements:
 ### Backend heavy full
 
 ```text
-Use backend-service-spec-skill to run a heavy full analysis on this backend microservice project.
+Use $backend-service-spec-skill to run a heavy full analysis on this backend microservice project.
 Requirements:
 1. classify project scope first
 2. run create_codemap
@@ -296,19 +296,19 @@ Use $cross-tech-stack-spec-skill to analyze this mixed-stack project.
 ### Backend + extension
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 ### Extension skill with all optional switches enabled
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced analysis.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced analysis.
 ```
 
 ### Full analysis mode
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets,
 and generate separate artifacts for all enabled capabilities.
 ```

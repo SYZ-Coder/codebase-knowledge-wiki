@@ -23,7 +23,7 @@
 例如：
 
 ```text
-请用 backend-service-spec-skill 梳理这个后端微服务项目。
+请用 $backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
 ## 快速入口
@@ -139,7 +139,7 @@
 | 已经锁定一个关键服务，想做纵向梳理 | `service_deep_dive` | [快速上手](./backend-service-spec-skill/references/quick-start.zh-CN.md) |
 | 想跟一条真实请求链路或消息链路 | `crate_router_map` | [命令速查表](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md) |
 | 想把多服务事实沉淀成业务域知识 | `build_domain_map` | [命令产物对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md) |
-| 项目是 App、H5、Python 或混合工作区 | `backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [扩展技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md) |
+| 项目是 App、H5、Python 或混合工作区 | `$backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [扩展技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md) |
 | 想快速抄一条可直接发给 Codex 的提示词 | 直接复用根 README 里的“快速命令”区块 | [快速命令](#快速命令) |
 | 想系统掌握完整使用方法 | 先看根 README，再进子技能 README 与 usage guide | [推荐阅读路径](#推荐阅读路径) |
 
@@ -149,7 +149,7 @@
 - 看单个关键服务：先用 `service_deep_dive`
 - 看跨服务真实链路：先用 `crate_router_map`
 - 看稳定业务域沉淀：最后用 `build_domain_map`
-- 看混合栈项目：以 `backend-service-spec-skill` 为主流程，再启用 `$cross-tech-stack-spec-skill`
+- 看混合栈项目：以 `$backend-service-spec-skill` 为主流程，再启用 `$cross-tech-stack-spec-skill`
 
 ## 开源配套文件
 
@@ -235,7 +235,7 @@
 
 ## 怎么选择使用哪套技能
 
-### 只用 `backend-service-spec-skill`
+### 只用 `$backend-service-spec-skill`
 
 适合：
 
@@ -243,7 +243,7 @@
 - 用“服务”就足够描述结构
 - 不需要跨技术栈适配
 
-### 启用 `cross-tech-stack-spec-skill`
+### 启用 `$cross-tech-stack-spec-skill`
 
 适合：
 
@@ -251,7 +251,7 @@
 - 需要分析前端、网关、后端、MQ、callback 等跨层链路
 - 只用后端服务语义会造成失真
 
-### `backend-service-spec-skill` + 扩展技能一起用
+### `$backend-service-spec-skill` + 扩展技能一起用
 
 适合：
 
@@ -261,7 +261,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 ## 快速命令
@@ -269,13 +269,13 @@
 ### 只用服务端基础技能
 
 ```text
-请用 backend-service-spec-skill 梳理这个后端微服务项目。
+请用 $backend-service-spec-skill 梳理这个后端微服务项目。
 ```
 
 ### 服务端基础技能轻量全量
 
 ```text
-请用 backend-service-spec-skill 对这个后端微服务项目做一轮轻量全量分析。
+请用 $backend-service-spec-skill 对这个后端微服务项目做一轮轻量全量分析。
 要求：
 1. 先做范围识别
 2. 再做 create_codemap
@@ -287,7 +287,7 @@
 ### 服务端基础技能重型全量
 
 ```text
-请用 backend-service-spec-skill 对这个后端微服务项目做一轮重型全量分析。
+请用 $backend-service-spec-skill 对这个后端微服务项目做一轮重型全量分析。
 要求：
 1. 先做范围识别
 2. 再做 create_codemap
@@ -307,19 +307,19 @@
 ### 服务端基础技能 + 扩展技能
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill 做混合栈适配。
 ```
 
 ### 扩展技能全开
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对项目做完整增强梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，对项目做完整增强梳理。
 ```
 
 ### 全量完整模式
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，
 对项目做一次全量完整分析，并为所有能力分别输出产物文档。
 ```

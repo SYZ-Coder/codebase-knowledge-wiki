@@ -38,7 +38,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_async_contract_map + enable_external_dependency_dossier，
 围绕接口 <接口路径 / 方法名 / controller 方法> 做完整链路梳理，并严格按代码事实输出。
 ```
@@ -69,7 +69,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，
 围绕功能 <功能名称> 做完整链路梳理，并严格按代码事实输出。
 ```
@@ -102,7 +102,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_async_contract_map + enable_error_semantics + enable_external_dependency_dossier，
 围绕 topic <topic 名称> 做完整链路梳理。
 要求：
@@ -138,7 +138,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_context_propagation_map + enable_interface_verification_assets，
 围绕页面入口 <页面路径 / App 路由 / 组件名> 做完整链路梳理，并严格按代码事实输出。
 ```

@@ -15,7 +15,7 @@ But the actual skill invocation name remains:
 That means users should still say:
 
 ```text
-Use backend-service-spec-skill to analyze this backend microservice project.
+Use $backend-service-spec-skill to analyze this backend microservice project.
 ```
 
 Do not use the directory name as the invocation name.
@@ -61,7 +61,7 @@ How to use it:
 Concrete example:
 
 ```text
-Use backend-service-spec-skill to run create_codemap on this payment platform project.
+Use $backend-service-spec-skill to run create_codemap on this payment platform project.
 Requirements:
 1. scope=payment-platform
 2. mode=service_landscape
@@ -92,7 +92,7 @@ How to use it:
 Concrete example:
 
 ```text
-Use backend-service-spec-skill to run build_domain_map for the order-fulfillment system.
+Use $backend-service-spec-skill to run build_domain_map for the order-fulfillment system.
 Requirements:
 1. scope=order-fulfillment
 2. build on the existing codemap and key service deep-dive results
@@ -127,7 +127,7 @@ How to use it:
 Concrete example:
 
 ```text
-Use backend-service-spec-skill to run crate_router_map for the "user submits order" chain.
+Use $backend-service-spec-skill to run crate_router_map for the "user submits order" chain.
 Requirements:
 1. scope=create-order
 2. trace from the gateway entry through order, inventory, discount, MQ publish, and payment pre-create
@@ -158,7 +158,7 @@ How to use it:
 Concrete example:
 
 ```text
-Use backend-service-spec-skill to run service_deep_dive on order-service.
+Use $backend-service-spec-skill to run service_deep_dive on order-service.
 Requirements:
 1. scope=order-service
 2. map controller / application / domain / infrastructure layers
@@ -185,7 +185,7 @@ The most common sequence is:
 Full example:
 
 ```text
-Use backend-service-spec-skill to run a structured analysis of this ecommerce backend project.
+Use $backend-service-spec-skill to run a structured analysis of this ecommerce backend project.
 Requirements:
 1. start with create_codemap to identify core services and dependencies
 2. run service_deep_dive on order-service and payment-service
@@ -300,7 +300,7 @@ If the team uses a central knowledge repository, read next:
 If the project is clearly mixed-stack, use:
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 Extension entry points:

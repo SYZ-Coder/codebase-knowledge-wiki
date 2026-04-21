@@ -23,7 +23,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map，对这条接口链路做契约细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_contract_map，对这条接口链路做契约细化梳理。
 ```
 
 输出重点：
@@ -48,7 +48,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_gateway_map，对这条请求链路做网关转发梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_gateway_map，对这条请求链路做网关转发梳理。
 ```
 
 输出重点：
@@ -73,7 +73,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_field_lineage，对这条链路中的关键字段流转做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_field_lineage，对这条链路中的关键字段流转做细化梳理。
 ```
 
 输出重点：
@@ -98,7 +98,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_context_propagation_map，对这条链路中的鉴权与上下文透传做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_context_propagation_map，对这条链路中的鉴权与上下文透传做细化梳理。
 ```
 
 输出重点：
@@ -123,7 +123,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics，对这条链路中的失败语义与错误处理做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_error_semantics，对这条链路中的失败语义与错误处理做细化梳理。
 ```
 
 输出重点：
@@ -148,7 +148,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map，对这条异步链路的契约与处理规则做细化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_async_contract_map，对这条异步链路的契约与处理规则做细化梳理。
 ```
 
 输出重点：
@@ -173,7 +173,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier，对跨团队与第三方依赖做档案化梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_external_dependency_dossier，对跨团队与第三方依赖做档案化梳理。
 ```
 
 输出重点：
@@ -198,7 +198,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_interface_verification_assets，对这条链路相关的验证资产做梳理。
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，同时开启 enable_interface_verification_assets，对这条链路相关的验证资产做梳理。
 ```
 
 输出重点：
@@ -217,4 +217,3 @@
 - 不要默认补这几页
 - 不要改变当前稳定基线输出
 - 不要把它们并进主流程
-

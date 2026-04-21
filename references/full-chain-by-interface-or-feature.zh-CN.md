@@ -23,7 +23,7 @@
 
 所以最稳的做法不是只跑一个命令，而是：
 
-- 以 `backend-service-spec-skill` 为主流程
+- 以 `$backend-service-spec-skill` 为主流程
 - 启用 `$cross-tech-stack-spec-skill`
 - 再按需开启若干可选开关
 
@@ -33,7 +33,7 @@
 
 适合先拿一版主链路结果：
 
-- `backend-service-spec-skill`
+- `$backend-service-spec-skill`
 - `$cross-tech-stack-spec-skill`
 - `enable_contract_map`
 - `enable_gateway_map`
@@ -74,7 +74,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_async_contract_map + enable_external_dependency_dossier，
 围绕接口 <接口路径 / 方法名 / controller 方法> 做完整链路梳理。
 要求：
@@ -98,7 +98,7 @@
 推荐命令：
 
 ```text
-请以 backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
+请以 $backend-service-spec-skill 为主流程，并启用 $cross-tech-stack-spec-skill，
 同时开启 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，
 围绕功能 <功能名称> 做完整链路梳理。
 要求：

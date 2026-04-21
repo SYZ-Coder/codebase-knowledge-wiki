@@ -5,7 +5,7 @@ This page provides ready-to-copy command templates for common usage scenarios.
 ## 1. First pass on a backend microservice project
 
 ```text
-Use backend-service-spec-skill to run a lightweight full analysis on this backend microservice project.
+Use $backend-service-spec-skill to run a lightweight full analysis on this backend microservice project.
 Requirements:
 1. classify project scope first
 2. run create_codemap
@@ -17,7 +17,7 @@ Requirements:
 ## 2. Build a backend knowledge baseline
 
 ```text
-Use backend-service-spec-skill to run a heavy full analysis on this backend microservice project.
+Use $backend-service-spec-skill to run a heavy full analysis on this backend microservice project.
 Requirements:
 1. classify project scope first
 2. run create_codemap
@@ -31,7 +31,7 @@ Requirements:
 ## 3. Mixed workspace with app/H5/Python/backend
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 Requirements:
 1. start with workspace layering
 2. run create_codemap
@@ -43,7 +43,7 @@ Requirements:
 ## 4. Frontend-backend integration
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_field_lineage + enable_interface_verification_assets
 to refine this integration flow and output parameters, field flow, and verification assets.
 ```
@@ -51,7 +51,7 @@ to refine this integration flow and output parameters, field flow, and verificat
 ## 5. Unclear gateway/BFF routing
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_gateway_map + enable_context_propagation_map
 to output gateway forwarding, context propagation, and final handling points for this request chain.
 ```
@@ -59,7 +59,7 @@ to output gateway forwarding, context propagation, and final handling points for
 ## 6. Kafka / MQ / callback system
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_async_contract_map + enable_error_semantics
 to output producer, topic, consumer, payload, retry, DLQ, and compensation information.
 ```
@@ -67,7 +67,7 @@ to output producer, topic, consumer, payload, retry, DLQ, and compensation infor
 ## 7. Trace a full chain from one interface
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_async_contract_map + enable_external_dependency_dossier
 to build a full-chain view around interface <path or method name>.
 Requirements:
@@ -80,7 +80,7 @@ Requirements:
 ## 8. Trace a full chain from one business feature
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets
 to build a full-chain view around feature <feature name>.
 Requirements:
@@ -93,7 +93,7 @@ Requirements:
 ## 9. Incremental maintenance for a team knowledge repository
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and perform an incremental update on top of the existing knowledge base.
 Requirements:
 1. identify the change scope first
@@ -105,7 +105,7 @@ Requirements:
 ## 10. Turn on everything in one pass
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
 and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets
 to run a full analysis and generate separate artifacts for every enabled capability.
 ```

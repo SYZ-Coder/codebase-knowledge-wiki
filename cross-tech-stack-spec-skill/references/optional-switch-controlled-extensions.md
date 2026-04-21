@@ -198,27 +198,27 @@ Recommended phrasing:
 Examples:
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for this integration flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_field_lineage for this integration flow.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_context_propagation_map for auth and context propagation tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_context_propagation_map for auth and context propagation tracing in this flow.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics for failure semantics tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_error_semantics for failure semantics tracing in this flow.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map for async contract tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_async_contract_map for async contract tracing in this flow.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier for cross-team and third-party dependency capture.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_external_dependency_dossier for cross-team and third-party dependency capture.
 ```
 
 ```text
-Use backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_interface_verification_assets for verification-asset tracing in this flow.
+Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_interface_verification_assets for verification-asset tracing in this flow.
 ```
 
 ## 5. Safety Rule
@@ -259,4 +259,3 @@ If these optional switches are implemented gradually, a useful order is:
 6. `enable_async_contract_map`
 7. `enable_external_dependency_dossier`
 8. `enable_interface_verification_assets`
-

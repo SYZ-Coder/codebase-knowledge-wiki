@@ -16,7 +16,7 @@ Use it when analysis must cross technical layers such as:
 
 ## 2. Relationship To The Base Skill
 
-### Base skill: `backend-service-spec-skill`
+### Base skill: `$backend-service-spec-skill`
 
 Use as the default main workflow for:
 
@@ -26,7 +26,7 @@ Use as the default main workflow for:
 - router maps centered on service-to-service communication
 - long-term central repository maintenance
 
-### Extension skill: `cross-tech-stack-spec-skill`
+### Extension skill: `$cross-tech-stack-spec-skill`
 
 Use as an opt-in extension when the target is not well described by backend-service language alone.
 
@@ -57,7 +57,7 @@ But it reinterprets them in a stack-neutral way.
 
 ## 4. When To Use Only The Base Skill
 
-Use only `backend-service-spec-skill` when:
+Use only `$backend-service-spec-skill` when:
 
 - the repository is a normal backend microservice or service family
 - service language already describes the codebase well
@@ -65,7 +65,7 @@ Use only `backend-service-spec-skill` when:
 
 ## 5. When To Enable The Extension Skill
 
-Enable `cross-tech-stack-spec-skill` when:
+Enable `$cross-tech-stack-spec-skill` when:
 
 - the user explicitly asks for cross-tech-stack expansion
 - the repository is mobile-first
@@ -79,7 +79,7 @@ Enable `cross-tech-stack-spec-skill` when:
 ### Pattern A: Base skill only
 
 ```text
-Use backend-service-spec-skill to map this backend microservice repository.
+Use $backend-service-spec-skill to map this backend microservice repository.
 ```
 
 ### Pattern B: Extension skill only, explicit
@@ -91,7 +91,7 @@ Use $cross-tech-stack-spec-skill to analyze this Flutter project.
 ### Pattern C: Base workflow plus extension layer
 
 ```text
-Use backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
 This is the most accurate wording for mixed-stack projects.
@@ -119,7 +119,7 @@ Please enable $cross-tech-stack-spec-skill and do a deep dive on this Python wor
 ### Mixed-stack route
 
 ```text
-Please use backend-service-spec-skill as the base workflow and enable $cross-tech-stack-spec-skill to trace the page -> api -> callback -> task route.
+Please use $backend-service-spec-skill as the base workflow and enable $cross-tech-stack-spec-skill to trace the page -> api -> callback -> task route.
 ```
 
 ## 8. Default Activation Rule
@@ -150,5 +150,3 @@ Please enable $cross-tech-stack-spec-skill and map HTTP, WebSocket, MQ, Kafka, a
 ```
 
 By default, the count should be understood as a code-visible count, not a runtime traffic count.
-
-
