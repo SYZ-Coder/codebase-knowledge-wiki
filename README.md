@@ -32,6 +32,87 @@ For example:
 Use $backend-service-spec-skill to analyze this backend microservice project.
 ```
 
+## Quick Install And Tool Setup
+
+For open-source users, this repository now provides cross-platform helper scripts:
+
+- PowerShell: `./scripts/install.ps1`
+- Shell: `./scripts/install.sh`
+
+### Codex
+
+Windows:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
+```
+
+macOS / Linux:
+
+```bash
+bash ./scripts/install.sh codex
+```
+
+This installs:
+
+- `backend-service-spec-skill`
+- `cross-tech-stack-spec-skill`
+
+into the local `~/.codex/skills/` directory.
+
+### Claude Code / Claude
+
+Claude Code does not have a native one-click install mechanism for this repository in the same way Codex does, but this repository provides a one-command project setup:
+
+Windows:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+```
+
+macOS / Linux:
+
+```bash
+bash ./scripts/install.sh claude /path/to/target-project
+```
+
+This installs into the target project:
+
+- `.claude/skills/backend-service-spec-skill/`
+- `.claude/skills/cross-tech-stack-spec-skill/`
+- `.claude/commands/*.md`
+
+After installation, Claude Code can use the copied skill folders and command templates directly inside that project.
+
+### Cursor
+
+Cursor also does not have a native one-click install mechanism for this repository, but this repository provides a one-command project setup:
+
+Windows:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+```
+
+macOS / Linux:
+
+```bash
+bash ./scripts/install.sh cursor /path/to/target-project
+```
+
+This installs into the target project:
+
+- `skills/backend-service-spec-skill/`
+- `skills/cross-tech-stack-spec-skill/`
+- `.cursor/rules/*.mdc`
+
+After installation, Cursor usually does not need any extra manual rule setup. The rule files are already copied into `.cursor/rules/`.
+
+Recommended next step:
+
+1. reopen the target project in Cursor, or let Cursor refresh project context
+2. ask Cursor Agent to run intents such as `create_codemap`, `service_deep_dive`, `crate_router_map`, or `build_domain_map`
+
 ## Quick Start Here
 
 If this is your first time in the repository, use this root README as the entry guide:

@@ -32,13 +32,92 @@
 请使用 $backend-service-spec-skill 分析这个后端微服务项目。
 ```
 
+## 快速安装与工具接入
+
+为了方便开源用户使用，本仓库现在提供了跨平台辅助脚本：
+
+- PowerShell: `./scripts/install.ps1`
+- Shell: `./scripts/install.sh`
+
+### Codex
+
+Windows：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
+```
+
+macOS / Linux：
+
+```bash
+bash ./scripts/install.sh codex
+```
+
+这会把以下两套技能安装到本地 `~/.codex/skills/` 目录：
+
+- `backend-service-spec-skill`
+- `cross-tech-stack-spec-skill`
+
+### Claude Code / Claude
+
+`Claude Code` 不像 `Codex` 那样有原生的一键技能安装机制，但本仓库提供了项目级的一键接入命令：
+
+Windows：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+```
+
+macOS / Linux：
+
+```bash
+bash ./scripts/install.sh claude /path/to/target-project
+```
+
+这会把以下内容安装到目标项目中：
+
+- `.claude/skills/backend-service-spec-skill/`
+- `.claude/skills/cross-tech-stack-spec-skill/`
+- `.claude/commands/*.md`
+
+安装完成后，`Claude Code` 就可以直接在该项目里使用这些技能目录和命令模板。
+
+### Cursor
+
+`Cursor` 也没有针对本仓库的原生一键技能安装机制，但本仓库提供了项目级的一键接入命令：
+
+Windows：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+```
+
+macOS / Linux：
+
+```bash
+bash ./scripts/install.sh cursor /path/to/target-project
+```
+
+这会把以下内容安装到目标项目中：
+
+- `skills/backend-service-spec-skill/`
+- `skills/cross-tech-stack-spec-skill/`
+- `.cursor/rules/*.mdc`
+
+安装完成后，`Cursor` 通常不需要再手工额外配置规则，因为规则文件已经被复制到 `.cursor/rules/`。
+
+建议下一步：
+
+1. 重新打开目标项目，或让 Cursor 刷新项目上下文。
+2. 直接让 Cursor Agent 执行 `create_codemap`、`service_deep_dive`、`crate_router_map`、`build_domain_map` 等工作流意图。
+
 ## 从这里开始
 
 如果你是第一次进入这个仓库，建议把这个根 README 当作总入口：
 
 1. 先阅读本文，了解两套技能、它们的边界，以及常见入口提示词。
-2. 如果目标是后端、微服务、遗留系统或平台服务仓库，继续阅读 [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)。
-3. 如果目标是移动端、H5、Python 或混合技术栈工作区，继续阅读 [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.zh-CN.md)。
+2. 如果目标是后端、微服务、遗留系统或平台服务仓库，继续阅读 [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)。
+3. 如果目标是移动端、H5、Python 或混合技术栈工作区，继续阅读 [跨技术栈规格技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md)。
 
 如果你主要想先知道 `backend-service-spec-skill` 能做什么，再决定是否深入子目录，可以先看下面的命令总览。
 
@@ -63,8 +142,8 @@
 
 继续阅读：
 
-- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
-- [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
+- [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
+- [后端技能命令输出对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
 
 ### 2. `service_deep_dive`
 
@@ -83,8 +162,8 @@
 
 继续阅读：
 
-- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
-- [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.zh-CN.md)
+- [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
+- [后端技能快速开始](./backend-service-spec-skill/references/quick-start.zh-CN.md)
 
 ### 3. `crate_router_map`
 
@@ -102,8 +181,8 @@
 
 继续阅读：
 
-- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
-- [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+- [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
+- [后端技能命令速查](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
 
 ### 4. `build_domain_map`
 
@@ -126,7 +205,7 @@
 
 继续阅读：
 
-- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
 - [从 `mydocs` 到中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
 
 ### 5. `requirement_fact_map`
@@ -147,23 +226,23 @@
 
 继续阅读：
 
-- [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
-- [Requirement Fact Extraction Guide](./backend-service-spec-skill/references/requirement-fact-extraction.md)
+- [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
+- [需求事实提取指南](./backend-service-spec-skill/references/requirement-fact-extraction.md)
 
 ## 建议阅读路径
 
 如果你想用最短路径上手：
 
-1. 阅读 [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.zh-CN.md)
-2. 阅读 [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
-3. 再回到 [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md) 阅读完整说明
+1. 阅读 [后端技能快速开始](./backend-service-spec-skill/references/quick-start.zh-CN.md)
+2. 阅读 [后端技能命令速查](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+3. 再回到 [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md) 阅读完整说明
 
 如果你想看全貌：
 
 1. 先读这个根 README
-2. 再读 [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md)
-3. 再读 [Backend Skill Usage Guide](./backend-service-spec-skill/references/usage-guide.md)
-4. 如果项目是混合栈，再继续阅读 [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.zh-CN.md)
+2. 再读 [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md)
+3. 再读 [后端技能使用指南](./backend-service-spec-skill/references/usage-guide.md)
+4. 如果项目是混合栈，再继续阅读 [跨技术栈规格技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md)
 
 ## 如何理解 `mydocs` 输出结构
 
@@ -193,12 +272,12 @@
 
 | 你的场景 | 推荐命令 / 用法 | 优先阅读 |
 | --- | --- | --- |
-| 你刚接手一个后端或微服务仓库，需要先看全局 | `create_codemap` | [Backend Service Spec Skill README](./backend-service-spec-skill/README.zh-CN.md) |
-| 你已经锁定一个高价值服务，想做纵向分析 | `service_deep_dive` | [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.zh-CN.md) |
-| 你想追踪一条真实请求链或消息链 | `crate_router_map` | [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md) |
-| 你想把服务事实沉淀成业务领域知识 | `build_domain_map` | [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.zh-CN.md) |
-| 历史需求缺失，你需要按功能模块抽取事实需求 | `requirement_fact_map` | [Requirement Fact Extraction Guide](./backend-service-spec-skill/references/requirement-fact-extraction.md) |
-| 项目是移动端、H5、Python 或混合技术栈 | `$backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.zh-CN.md) |
+| 你刚接手一个后端或微服务仓库，需要先看全局 | `create_codemap` | [后端服务规格技能 README](./backend-service-spec-skill/README.zh-CN.md) |
+| 你已经锁定一个高价值服务，想做纵向分析 | `service_deep_dive` | [后端技能快速开始](./backend-service-spec-skill/references/quick-start.zh-CN.md) |
+| 你想追踪一条真实请求链或消息链 | `crate_router_map` | [后端技能命令速查](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md) |
+| 你想把服务事实沉淀成业务领域知识 | `build_domain_map` | [后端技能命令输出对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md) |
+| 历史需求缺失，你需要按功能模块抽取事实需求 | `requirement_fact_map` | [需求事实提取指南](./backend-service-spec-skill/references/requirement-fact-extraction.md) |
+| 项目是移动端、H5、Python 或混合技术栈 | `$backend-service-spec-skill` + `$cross-tech-stack-spec-skill` | [跨技术栈规格技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md) |
 | 你想要一条可直接发给 Codex 的现成提示词 | 复用根 README 里的快速命令示例 | [快速命令](#快速命令) |
 | 你想了解完整工作流和配套材料 | 先读根 README，再读子 README 和 usage guide | [建议阅读路径](#建议阅读路径) |
 
@@ -227,19 +306,19 @@
 
 继续阅读：
 
-- [Cross Tech Stack Spec Skill README](./cross-tech-stack-spec-skill/README.zh-CN.md)
-- [Extension Skill Command Output Map](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
-- [Mixed-Stack Diagram Output Guidelines](./cross-tech-stack-spec-skill/references/diagram-output-guidelines.zh-CN.md)
-- [Mixed-Stack Diagram Output Example Template](./cross-tech-stack-spec-skill/references/diagram-output-example-template.zh-CN.md)
-- [Mermaid Safety Checklist](./cross-tech-stack-spec-skill/references/mermaid-safety-checklist.zh-CN.md)
+- [跨技术栈规格技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md)
+- [扩展技能命令输出对照](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
+- [混合技术栈图产物输出规范](./cross-tech-stack-spec-skill/references/diagram-output-guidelines.zh-CN.md)
+- [混合技术栈图产物示例模板](./cross-tech-stack-spec-skill/references/diagram-output-example-template.zh-CN.md)
+- [Mermaid 自检清单](./cross-tech-stack-spec-skill/references/mermaid-safety-checklist.zh-CN.md)
 
 ## 开源配套文件
 
 这个仓库还包含了一些技能使用的配套文件：
 
-- [License](./LICENSE)
-- [Installation Guide](./references/installation-guide.zh-CN.md)
-- [Directory And Terminology Baseline](./references/directory-and-terminology-baseline.zh-CN.md)
+- [许可证](./LICENSE)
+- [安装指南](./references/installation-guide.zh-CN.md)
+- [目录与术语基线](./references/directory-and-terminology-baseline.zh-CN.md)
 - [从 `mydocs` 到中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
 - [中央知识库与 OpenSpec 协作](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
 
@@ -270,13 +349,13 @@
 
 继续阅读：
 
-- [Backend Skill Quick Start](./backend-service-spec-skill/references/quick-start.zh-CN.md)
-- [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
-- [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
-- [Requirement Fact Extraction Guide](./backend-service-spec-skill/references/requirement-fact-extraction.md)
-- [Backend Skill Metadata](./backend-service-spec-skill/SKILL.md)
-- [Backend Skill Usage Guide](./backend-service-spec-skill/references/usage-guide.md)
-- [Backend Skill README](./backend-service-spec-skill/README.zh-CN.md)
+- [后端技能快速开始](./backend-service-spec-skill/references/quick-start.zh-CN.md)
+- [后端技能命令输出对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
+- [后端技能命令速查](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+- [需求事实提取指南](./backend-service-spec-skill/references/requirement-fact-extraction.md)
+- [后端技能元数据](./backend-service-spec-skill/SKILL.md)
+- [后端技能使用指南](./backend-service-spec-skill/references/usage-guide.md)
+- [后端技能 README](./backend-service-spec-skill/README.zh-CN.md)
 
 ### 2. 跨技术栈扩展技能
 
@@ -299,15 +378,15 @@
 
 继续阅读：
 
-- [Extension Skill Metadata](./cross-tech-stack-spec-skill/SKILL.md)
-- [Detailed Extension Usage Guide](./cross-tech-stack-spec-skill/references/extension-usage-guide.zh-CN.md)
-- [Extension Skill Command Output Map](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
-- [Extension Skill Command Quick Reference](./cross-tech-stack-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
-- [Mixed-Stack Diagram Output Guidelines](./cross-tech-stack-spec-skill/references/diagram-output-guidelines.zh-CN.md)
-- [Mermaid Safety Checklist](./cross-tech-stack-spec-skill/references/mermaid-safety-checklist.zh-CN.md)
-- [Full Analysis Mode](./references/full-analysis-mode.zh-CN.md)
-- [Optional Switch Extensions](./cross-tech-stack-spec-skill/references/optional-switch-controlled-extensions.zh-CN.md)
-- [Extension README](./cross-tech-stack-spec-skill/README.zh-CN.md)
+- [扩展技能元数据](./cross-tech-stack-spec-skill/SKILL.md)
+- [扩展技能详细使用指南](./cross-tech-stack-spec-skill/references/extension-usage-guide.zh-CN.md)
+- [扩展技能命令输出对照](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
+- [扩展技能命令速查](./cross-tech-stack-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+- [混合技术栈图产物输出规范](./cross-tech-stack-spec-skill/references/diagram-output-guidelines.zh-CN.md)
+- [Mermaid 自检清单](./cross-tech-stack-spec-skill/references/mermaid-safety-checklist.zh-CN.md)
+- [全量分析模式](./references/full-analysis-mode.zh-CN.md)
+- [可选开关扩展说明](./cross-tech-stack-spec-skill/references/optional-switch-controlled-extensions.zh-CN.md)
+- [扩展技能 README](./cross-tech-stack-spec-skill/README.zh-CN.md)
 
 ## 如何选择
 
@@ -331,7 +410,7 @@
 推荐表达方式：
 
 ```text
-Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
+请以 $backend-service-spec-skill 作为基础工作流，并启用 $cross-tech-stack-spec-skill 进行混合技术栈适配。
 ```
 
 ## 快速命令
@@ -339,77 +418,79 @@ Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-sta
 ### 仅使用后端技能
 
 ```text
-Use $backend-service-spec-skill to analyze this backend microservice project with standard outputs.
-Generate the normal text pages and companion Markdown/Mermaid diagrams together.
+请使用 $backend-service-spec-skill 分析这个后端微服务项目，并按标准产物输出。
+请同时生成常规正文页面及配套的 Markdown/Mermaid 图。
 ```
 
 ### 后端轻量完整分析
 
 ```text
-Use $backend-service-spec-skill to run a lightweight full analysis on this backend microservice project.
-Requirements:
-1. classify project scope first
-2. run create_codemap
-3. run service_deep_dive on 1 to 2 high-value services
-4. run crate_router_map on 1 to 2 key chains
-5. generate standard outputs, including companion Markdown/Mermaid diagrams by default
-6. stay strictly grounded in code facts
+请使用 $backend-service-spec-skill 对这个后端微服务项目执行一轮轻量完整分析。
+要求：
+1. 先识别项目范围
+2. 执行 create_codemap
+3. 对 1 到 2 个高价值服务执行 service_deep_dive
+4. 对 1 到 2 条关键链路执行 crate_router_map
+5. 输出标准产物，并默认附带 Markdown/Mermaid 配套图
+6. 严格基于代码事实，不要脱离证据推断
 ```
 
 ### 后端重型完整分析
 
 ```text
-Use $backend-service-spec-skill to run a heavy full analysis on this backend microservice project.
-Requirements:
-1. classify project scope first
-2. run create_codemap
-3. run service_deep_dive on multiple high-value services
-4. run crate_router_map on multiple key chains
-5. run build_domain_map last
-6. generate standard outputs, including companion Markdown/Mermaid diagrams by default
-7. output validation pages and unresolved-chain summaries
-8. stay strictly grounded in code facts
+请使用 $backend-service-spec-skill 对这个后端微服务项目执行一轮重型完整分析。
+要求：
+1. 先识别项目范围
+2. 执行 create_codemap
+3. 对多个高价值服务执行 service_deep_dive
+4. 对多条关键链路执行 crate_router_map
+5. 最后执行 build_domain_map
+6. 输出标准产物，并默认附带 Markdown/Mermaid 配套图
+7. 输出验证页面和未闭环链路摘要
+8. 严格基于代码事实，不要脱离证据推断
 ```
 
 ### 历史需求事实提取
 
 ```text
-Use $backend-service-spec-skill to extract factual requirements for this historical project.
-Requirements:
-1. run create_codemap first to identify system boundaries, services, and core entry points
-2. run service_deep_dive on high-value services
-3. run crate_router_map on key business chains
-4. run requirement_fact_map last to extract current factual requirements by functional module
-5. output artifacts under mydocs/requirements/
-6. stay strictly grounded in code facts, and do not promote clues into confirmed requirements
+请使用 $backend-service-spec-skill 为这个历史项目提取事实需求。
+要求：
+1. 先执行 create_codemap，识别系统边界、服务和核心入口
+2. 对高价值服务执行 service_deep_dive
+3. 对关键业务链路执行 crate_router_map
+4. 最后执行 requirement_fact_map，按功能模块提取当前事实需求
+5. 产物输出到 mydocs/requirements/
+6. 严格基于代码事实，不要把线索升级成已确认需求
 ```
 
 ### 仅使用扩展技能
 
 ```text
-Use $cross-tech-stack-spec-skill to analyze this mixed-stack project.
+请使用 $cross-tech-stack-spec-skill 分析这个混合技术栈项目。
 ```
 
 ### 后端 + 扩展技能
 
 ```text
-Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
-Generate standard outputs and companion Markdown/Mermaid diagrams together.
+请以 $backend-service-spec-skill 作为基础工作流，并启用 $cross-tech-stack-spec-skill 进行混合技术栈适配。
+请输出标准产物，并同时生成 Markdown/Mermaid 配套图。
 ```
 
 ### 启用全部可选开关的扩展分析
 
 ```text
-Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill, and turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets for a full enhanced analysis.
-Generate standard outputs and companion Markdown/Mermaid diagrams together.
+请以 $backend-service-spec-skill 作为基础工作流，启用 $cross-tech-stack-spec-skill，
+并打开 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，
+对项目执行一轮完整增强分析。
+请输出标准产物，并同时生成 Markdown/Mermaid 配套图。
 ```
 
 ### 全量分析模式
 
 ```text
-Use $backend-service-spec-skill as the base workflow, enable $cross-tech-stack-spec-skill,
-turn on enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets,
-and generate separate standard artifacts for all enabled capabilities, including companion Markdown/Mermaid diagrams.
+请以 $backend-service-spec-skill 作为基础工作流，启用 $cross-tech-stack-spec-skill，
+打开 enable_contract_map + enable_gateway_map + enable_field_lineage + enable_context_propagation_map + enable_error_semantics + enable_async_contract_map + enable_external_dependency_dossier + enable_interface_verification_assets，
+并为所有已启用能力分别生成标准产物，包括配套的 Markdown/Mermaid 图。
 ```
 
 说明：
@@ -420,13 +501,13 @@ and generate separate standard artifacts for all enabled capabilities, including
 
 ## 推荐阅读顺序
 
-- [Team Standard Workflow](./references/team-standard-workflow.zh-CN.md)
-- [Full Analysis Mode](./references/full-analysis-mode.zh-CN.md)
+- [团队标准工作流](./references/team-standard-workflow.zh-CN.md)
+- [全量分析模式](./references/full-analysis-mode.zh-CN.md)
 - [从 `mydocs` 到中央知识库](./references/mydocs-to-central-knowledge-repo.zh-CN.md)
 - [中央知识库与 OpenSpec 协作](./references/knowledge-repo-and-openspec-collaboration.zh-CN.md)
-- [Scenario Command Recipes](./references/scenario-command-recipes.zh-CN.md)
-- [Trace A Full Chain From An Interface Or Feature](./references/full-chain-by-interface-or-feature.zh-CN.md)
-- [Anchor Selection Guide](./references/anchor-selection-guide.zh-CN.md)
+- [场景命令配方](./references/scenario-command-recipes.zh-CN.md)
+- [从接口或功能追踪完整链路](./references/full-chain-by-interface-or-feature.zh-CN.md)
+- [锚点选择指南](./references/anchor-selection-guide.zh-CN.md)
 
 1. 先读后端 quick-start 指南。
 2. 再读 backend-service README 或 usage guide。
@@ -435,12 +516,12 @@ and generate separate standard artifacts for all enabled capabilities, including
 
 ## 补充导航
 
-- [Team Standard Workflow](./references/team-standard-workflow.zh-CN.md)
-- [Personal Workflow For Backend-Microservice Projects](./backend-service-spec-skill/references/personal-workflow.zh-CN.md)
-- [Backend Skill Command Output Map](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
-- [Backend Skill Command Quick Reference](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
-- [Extension Skill Command Output Map](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
-- [Extension Skill Command Quick Reference](./cross-tech-stack-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+- [团队标准工作流](./references/team-standard-workflow.zh-CN.md)
+- [后端微服务项目个人工作流](./backend-service-spec-skill/references/personal-workflow.zh-CN.md)
+- [后端技能命令输出对照](./backend-service-spec-skill/references/command-output-map.zh-CN.md)
+- [后端技能命令速查](./backend-service-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
+- [扩展技能命令输出对照](./cross-tech-stack-spec-skill/references/command-output-map.zh-CN.md)
+- [扩展技能命令速查](./cross-tech-stack-spec-skill/references/command-output-scenario-quickref.zh-CN.md)
 
 ## 中文导航
 

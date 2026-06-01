@@ -175,11 +175,11 @@ bash ./scripts/install.sh claude /path/to/target-project
 示例提示词：
 
 ```text
-/backend-service-spec-skill create_codemap: mode=service_landscape, scope=current project, goal=generate the service landscape
+/backend-service-spec-skill create_codemap: mode=service_landscape, scope=当前项目, goal=生成服务全景图
 ```
 
 ```text
-/cross-tech-stack-spec-skill map the login route across page, backend, message, and callback boundaries
+/cross-tech-stack-spec-skill 分析登录链路，覆盖 page、backend、message、callback 等边界
 ```
 
 也可以直接使用自然语言。Claude Code 会根据各个 `SKILL.md` 的 `description` 判断是否启用对应技能。
@@ -206,19 +206,19 @@ bash ./scripts/install.sh claude /path/to/target-project
 复制后可在 Claude Code 中使用：
 
 ```text
-/create-codemap mode=service_landscape scope=current-project goal=generate service landscape and key route index
+/create-codemap mode=service_landscape scope=当前项目 goal=生成服务全景图与关键链路索引
 ```
 
 ```text
-/service-deep-dive scope=user-service goal=map APIs, dependencies, MQ, and risk hotspots
+/service-deep-dive scope=user-service goal=梳理接口、依赖、MQ 和风险热点
 ```
 
 ```text
-/crate-router-map scope=login-flow goal=split sync calls, async messages, and closure status
+/crate-router-map scope=login-flow goal=拆分同步调用、异步消息和闭环状态
 ```
 
 ```text
-/build-domain-map scope=order-domain goal=roll existing service facts up into domain knowledge
+/build-domain-map scope=order-domain goal=把已有服务事实提升为领域知识
 ```
 
 注意：
@@ -286,15 +286,15 @@ bash ./scripts/install.sh cursor /path/to/target-project
 Cursor 中可直接输入类似请求：
 
 ```text
-create_codemap: mode=service_landscape, scope=current project, goal=generate the service landscape and key route index first
+create_codemap: mode=service_landscape, scope=当前项目, goal=先生成服务全景图和关键链路索引
 ```
 
 ```text
-service_deep_dive: scope=user-service, goal=map APIs, dependencies, MQ, and risk hotspots
+service_deep_dive: scope=user-service, goal=梳理接口、依赖、MQ 和风险热点
 ```
 
 ```text
-crate_router_map: scope=login flow, goal=split sync calls, async messages, and closure status
+crate_router_map: scope=登录链路, goal=拆分同步调用、异步消息和闭环状态
 ```
 
 注意：
