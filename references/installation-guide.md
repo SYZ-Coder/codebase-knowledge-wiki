@@ -7,17 +7,80 @@ It supports two installation styles:
 1. native skill-folder installation
 2. repository-based rule or instruction integration
 
+Important distinction:
+
+- `Codex` supports native skill-folder installation
+- `Claude Code / Claude`, `Cursor`, and most other AI tools usually do not have a one-click install command for this repository
+- for those tools, the practical approach is to reference this repository through project rules, instruction files, or copied template folders
+
+## 0. Cross-Platform One-Command Install
+
+This repository now provides cross-platform helper scripts:
+
+- PowerShell: `./scripts/install.ps1`
+- Shell: `./scripts/install.sh`
+
+They support three targets:
+
+- `codex`
+- `claude`
+- `cursor`
+
+Windows examples:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+```
+
+macOS / Linux examples:
+
+```bash
+bash ./scripts/install.sh codex
+```
+
+```bash
+bash ./scripts/install.sh claude /path/to/target-project
+```
+
+```bash
+bash ./scripts/install.sh cursor /path/to/target-project
+```
+
+What each command does:
+
+- `codex`: installs both skills into the local `~/.codex/skills/` directory
+- `claude`: installs both skills plus `.claude/commands/` into the target project
+- `cursor`: installs both skills plus `.cursor/rules/` into the target project
+
 ## 1. Quick Choice
 
 Use this table first:
 
 - `Codex`: copy the skill folders into the local Codex skills directory
-- `Claude Code / Claude`: reference the repository from `CLAUDE.md` or project instructions
-- `Cursor`: reference the repository from `.cursor/rules/`
+- `Claude Code / Claude`: no one-click install command; reference the repository from `CLAUDE.md`, `.claude/skills/`, or `.claude/commands/`
+- `Cursor`: no one-click install command; reference the repository from `.cursor/rules/`
 - `VS Code + AI extension`: reference the repository from project rules, prompts, or docs
 - other AI tools: use the generic integration template at the end of this guide
 
 ## 2. Codex
+
+One-command install:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
+```
+
+```bash
+bash ./scripts/install.sh codex
+```
 
 Copy these two directories into your Codex skills directory:
 
@@ -49,7 +112,25 @@ Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-sta
 
 ## 3. Claude Code / Claude
 
-Claude Code can be integrated at three levels.
+Claude Code does not provide a one-click install command for this repository in the same sense as Codex native skills.
+
+In practice, Claude Code is integrated at three levels.
+
+Project one-command setup provided by this repository:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+```
+
+```bash
+bash ./scripts/install.sh claude /path/to/target-project
+```
+
+The helper script installs:
+
+- `.claude/skills/backend-service-spec-skill/`
+- `.claude/skills/cross-tech-stack-spec-skill/`
+- `.claude/commands/*.md`
 
 ### 3.1 Basic: `CLAUDE.md`
 
@@ -148,6 +229,26 @@ Notes:
 - If no scripts exist, Claude Code should inspect code directly and generate `mydocs/` artifacts according to the skill rules.
 
 ## 4. Cursor
+
+Cursor also does not provide a one-click install command for this repository.
+
+In practice, the normal approach is to copy or reference rule files and then let Cursor Agent follow them.
+
+Project one-command setup provided by this repository:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+```
+
+```bash
+bash ./scripts/install.sh cursor /path/to/target-project
+```
+
+The helper script installs:
+
+- `skills/backend-service-spec-skill/`
+- `skills/cross-tech-stack-spec-skill/`
+- `.cursor/rules/*.mdc`
 
 Recommended method:
 
@@ -254,6 +355,7 @@ Treat this repository as:
 
 - a native skill install for Codex
 - a repository-based rule source for Claude, Cursor, VS Code, and similar AI development tools
+- not a one-click install package for Claude Code or Cursor
 
 ## 8. What To Do With Generated `mydocs/`
 
