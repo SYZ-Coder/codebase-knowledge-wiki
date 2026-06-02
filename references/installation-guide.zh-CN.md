@@ -160,7 +160,7 @@ bash ./scripts/install.sh claude /path/to/target-project
 
 ### 3.2 原生技能目录：`.claude/skills/`
 
-如果希望 Claude Code 以技能的方式发现并使用这些能力，可以把两个技能目录复制到目标项目：
+如果希望 Claude Code 通过“项目内技能目录”的方式发现并使用这些能力，可以把两个技能目录复制到目标项目：
 
 ```text
 <目标项目>/
@@ -182,7 +182,7 @@ bash ./scripts/install.sh claude /path/to/target-project
 /cross-tech-stack-spec-skill 分析登录链路，覆盖 page、backend、message、callback 等边界
 ```
 
-也可以直接使用自然语言。Claude Code 会根据各个 `SKILL.md` 的 `description` 判断是否启用对应技能。
+也可以直接使用自然语言。Claude Code 可能会根据各个 `SKILL.md` 的 `description` 判断这些项目内技能上下文是否相关。
 
 ### 3.3 可选命令模板：`.claude/commands/`
 
@@ -226,7 +226,7 @@ bash ./scripts/install.sh claude /path/to/target-project
 - `.claude/commands/*.md` 是 Claude Code 的 slash command 模板，不需要 MCP Server。
 - slash command 负责把用户输入转成稳定工作流；真正的分析仍然依赖 `SKILL.md`、代码搜索、配置读取和必要的终端命令。
 - 如果目标项目有自定义脚本，可以把执行细节补到 command 模板里。
-- 如果没有脚本，Claude Code 应直接检查代码并按技能规则生成 `mydocs/` 产物。
+- 如果没有脚本，Claude Code 应直接检查代码并按项目内技能规则生成 `mydocs/` 产物。
 
 ## 4. Cursor
 
@@ -299,8 +299,9 @@ crate_router_map: scope=登录链路, goal=拆分同步调用、异步消息和�
 
 注意：
 
-- `.mdc` 是 Cursor 规则文件，不是原生插件、MCP 工具或 slash command。
+- `.mdc` 是 Cursor 规则文件，不是原生插件、MCP 工具、slash command，也不是原生技能注册项。
 - `create_codemap` 等名称在 Cursor 中表示“工作流意图”；Agent 会按规则读取代码并生成产物。
+- Cursor 里的 `skills/` 目录更适合作为辅助上下文理解，而不是像 Codex 那样的原生技能执行。
 - 如果目标项目提供了 `scripts/`、`bin/`、`tools/`、`package.json` 或 `Makefile` 等可执行入口，Cursor Agent 可以优先运行它们。
 - 如果没有可执行脚本，Cursor Agent 应手动检查代码和配置，并生成 `mydocs/` 文档。
 - 跨技术栈规则只在移动端、H5、Python、混合栈项目，或用户明确要求跨栈分析时启用。
@@ -355,6 +356,8 @@ VS Code 通常通过 AI 扩展使用这套仓库，而不是通过原生技能�
 
 - 在 `Codex` 中作为原生技能安装
 - 在 `Claude`、`Cursor`、`VS Code` 及类似工具中作为规则仓库接入
+- 在 `Claude Code` 中，如安装了 `.claude/skills/` 或 `.claude/commands/`，可作为项目内技能 / 命令支持使用
+- 在 `Cursor` 中，应理解为规则驱动工作流支持，而不是原生技能执行
 - 它不是 `Claude Code` 或 `Cursor` 的一键安装包
 
 ## 8. 生成的 `mydocs/` 如何落地

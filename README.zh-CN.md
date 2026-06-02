@@ -80,7 +80,8 @@ bash ./scripts/install.sh claude /path/to/target-project
 - `.claude/skills/cross-tech-stack-spec-skill/`
 - `.claude/commands/*.md`
 
-安装完成后，`Claude Code` 就可以直接在该项目里使用这些技能目录和命令模板。
+安装完成后，`Claude Code` 就可以在该项目里使用这些项目内技能目录和命令模板。
+这种方式更接近“项目内技能 / 命令使用”，而不是 `Codex` 那种原生技能注册表执行。
 
 ### Cursor
 
@@ -105,6 +106,7 @@ bash ./scripts/install.sh cursor /path/to/target-project
 - `.cursor/rules/*.mdc`
 
 安装完成后，`Cursor` 通常不需要再手工额外配置规则，因为规则文件已经被复制到 `.cursor/rules/`。
+这里应理解为“基于规则的工作流执行”，而不是像 `Codex` 那样的原生技能注册表执行。
 
 建议下一步：
 

@@ -160,7 +160,7 @@ With this method, `create_codemap`, `service_deep_dive`, `crate_router_map`, and
 
 ### 3.2 Native Skill Folder: `.claude/skills/`
 
-If you want Claude Code to discover and use these capabilities as skills, copy the two skill folders into the target project:
+If you want Claude Code to discover and use these capabilities through project-local skill folders, copy the two skill folders into the target project:
 
 ```text
 <target-project>/
@@ -182,7 +182,7 @@ Example prompts:
 /cross-tech-stack-spec-skill map the login route across page, backend, message, and callback boundaries
 ```
 
-You can also ask in natural language. Claude Code uses each `SKILL.md` `description` to decide whether a skill is relevant.
+You can also ask in natural language. Claude Code may use each `SKILL.md` `description` to judge whether the project-local skill context is relevant.
 
 ### 3.3 Optional Commands: `.claude/commands/`
 
@@ -226,7 +226,7 @@ Notes:
 - `.claude/commands/*.md` files are Claude Code slash command templates and do not require an MCP Server.
 - A slash command turns user input into a stable workflow; the actual analysis still depends on `SKILL.md`, code search, config reading, and any necessary terminal commands.
 - If the target project has custom scripts, add their execution details to the command templates.
-- If no scripts exist, Claude Code should inspect code directly and generate `mydocs/` artifacts according to the skill rules.
+- If no scripts exist, Claude Code should inspect code directly and generate `mydocs/` artifacts according to the project-local skill rules.
 
 ## 4. Cursor
 
@@ -299,8 +299,9 @@ crate_router_map: scope=login flow, goal=split sync calls, async messages, and c
 
 Notes:
 
-- `.mdc` files are Cursor rules, not native plugins, MCP tools, or slash commands.
+- `.mdc` files are Cursor rules, not native plugins, MCP tools, slash commands, or native skill-registry entries.
 - Names such as `create_codemap` are workflow intents in Cursor; the Agent follows the rules, reads code, and generates artifacts.
+- The `skills/` folder in Cursor should be understood as supporting context, not as Codex-style native skill execution.
 - If the target project provides executable entries under `scripts/`, `bin/`, `tools/`, `package.json`, or `Makefile`, Cursor Agent can prefer running them.
 - If no executable script exists, Cursor Agent should manually inspect code and config, then generate `mydocs/` documentation.
 - The cross-tech-stack rule is only for mobile, H5, Python, mixed-stack projects, or explicit cross-stack analysis requests.
@@ -355,6 +356,8 @@ Treat this repository as:
 
 - a native skill install for Codex
 - a repository-based rule source for Claude, Cursor, VS Code, and similar AI development tools
+- project-local skill/command support for Claude Code when `.claude/skills/` or `.claude/commands/` is installed
+- rule-driven workflow support for Cursor rather than native skill execution
 - not a one-click install package for Claude Code or Cursor
 
 ## 8. What To Do With Generated `mydocs/`

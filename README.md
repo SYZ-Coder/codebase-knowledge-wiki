@@ -82,7 +82,8 @@ This installs into the target project:
 - `.claude/skills/cross-tech-stack-spec-skill/`
 - `.claude/commands/*.md`
 
-After installation, Claude Code can use the copied skill folders and command templates directly inside that project.
+After installation, Claude Code can use the copied project-local skill folders and command templates inside that project.
+This is closer to project-scoped skill/command usage than to Codex-style native skill registry execution.
 
 ### Cursor
 
@@ -107,6 +108,7 @@ This installs into the target project:
 - `.cursor/rules/*.mdc`
 
 After installation, Cursor usually does not need any extra manual rule setup. The rule files are already copied into `.cursor/rules/`.
+Cursor should be understood as rule-driven workflow execution here, not as native skill-registry execution like Codex.
 
 Recommended next step:
 
