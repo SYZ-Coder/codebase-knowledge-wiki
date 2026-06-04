@@ -33,11 +33,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-project-dir>
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
 ```
 
 macOS / Linux examples:
@@ -47,12 +47,14 @@ bash ./scripts/install.sh codex
 ```
 
 ```bash
-bash ./scripts/install.sh claude /path/to/target-project
+bash ./scripts/install.sh claude <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh cursor /path/to/target-project
+bash ./scripts/install.sh cursor <target-project-dir>
 ```
+
+Replace `<target-project-dir>` with the root directory of the project where you want the skill files to be installed.
 
 What each command does:
 
@@ -119,11 +121,11 @@ In practice, Claude Code is integrated at three levels.
 Project one-command setup provided by this repository:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh claude /path/to/target-project
+bash ./scripts/install.sh claude <target-project-dir>
 ```
 
 The helper script installs:
@@ -237,11 +239,11 @@ In practice, the normal approach is to copy or reference rule files and then let
 Project one-command setup provided by this repository:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh cursor /path/to/target-project
+bash ./scripts/install.sh cursor <target-project-dir>
 ```
 
 The helper script installs:

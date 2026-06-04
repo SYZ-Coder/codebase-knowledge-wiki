@@ -33,11 +33,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 codex
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-project-dir>
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
 ```
 
 macOS / Linux 示例：
@@ -47,12 +47,14 @@ bash ./scripts/install.sh codex
 ```
 
 ```bash
-bash ./scripts/install.sh claude /path/to/target-project
+bash ./scripts/install.sh claude <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh cursor /path/to/target-project
+bash ./scripts/install.sh cursor <target-project-dir>
 ```
+
+请把 `<target-project-dir>` 替换成你希望安装技能文件的目标项目根目录。
 
 每个命令会做什么：
 
@@ -119,11 +121,11 @@ Claude Code 不像 Codex 原生技能那样，为这个仓库提供一键安装�
 本仓库提供的项目级一键接入命令：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh claude /path/to/target-project
+bash ./scripts/install.sh claude <target-project-dir>
 ```
 
 辅助脚本会安装：
@@ -237,11 +239,11 @@ Cursor 也没有针对本仓库的一键安装命令。
 本仓库提供的项目级一键接入命令：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor D:\path\to\target-project
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
 ```
 
 ```bash
-bash ./scripts/install.sh cursor /path/to/target-project
+bash ./scripts/install.sh cursor <target-project-dir>
 ```
 
 辅助脚本会安装：

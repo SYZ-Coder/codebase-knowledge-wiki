@@ -22,6 +22,7 @@ Do not use the directory name as the invocation name.
 
 If you want the shortest starting point, read:
 
+- [Backend Skill References Index](./references/README.md)
 - [Quick Start](./references/quick-start.md)
 - [Personal Workflow For Backend-Microservice Projects](./references/personal-workflow.md)
 - [Command Output Map](./references/command-output-map.md)
@@ -358,6 +359,7 @@ If the team uses a central knowledge repository, read next:
 
 ## Read Next
 
+- [Backend Skill References Index](./references/README.md)
 - [Quick Start](./references/quick-start.md)
 - [Personal Workflow For Backend-Microservice Projects](./references/personal-workflow.md)
 - [Command Output Map](./references/command-output-map.md)

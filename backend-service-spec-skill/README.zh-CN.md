@@ -22,6 +22,7 @@
 
 如果你想最快上手，先读：
 
+- [后端技能 References 导航](./references/README.zh-CN.md)
 - [快速上手](./references/quick-start.zh-CN.md)
 - [个人使用流程（偏微服务后端）](./references/personal-workflow.zh-CN.md)
 - [命令产物对照](./references/command-output-map.zh-CN.md)
@@ -413,6 +414,7 @@ mydocs/
 
 ## 建议继续阅读
 
+- [后端技能 References 导航](./references/README.zh-CN.md)
 - [快速上手](./references/quick-start.zh-CN.md)
 - [个人使用流程（偏微服务后端）](./references/personal-workflow.zh-CN.md)
 - [命令产物对照](./references/command-output-map.zh-CN.md)

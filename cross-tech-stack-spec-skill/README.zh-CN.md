@@ -1,4 +1,4 @@
-# Cross Tech Stack Spec Skill
+# Cross-Tech-Stack Spec Skill
 
 这是一套用于“跨技术栈项目分析”的显式扩展技能。
 
@@ -33,6 +33,7 @@
 
 如果用户希望一次性把基础流程和全部扩展开关都跑完，并分别输出所有产物，可以参考：
 
+- [跨技术栈 References 导航](./references/README.zh-CN.md)
 - [全量完整模式](../references/full-analysis-mode.zh-CN.md)
 - [命令产物对照](./references/command-output-map.zh-CN.md)
 - [命令速查表](./references/command-output-scenario-quickref.zh-CN.md)
@@ -44,7 +45,7 @@
 
 ## 图产物支持
 
-这个扩展技能中的 mixed-stack 图产物，应视为一等输出，而不是可有可无的附加品。
+这个扩展技能中的混合技术栈图产物，应视为一等输出，而不是可有可无的附加品。
 推荐统一使用 `Markdown + Mermaid`，这样对人和 AI 都更稳定可读。
 
 推荐图类型：
@@ -60,7 +61,7 @@
 
 默认触发规则：
 
-- 当这个扩展技能按标准产物执行时，配套 mixed-stack 图默认应一并产出
+- 当这个扩展技能按标准产物执行时，配套混合技术栈图默认应一并产出
 - 正常情况下，用户不需要每次重复写“请生成图”
 - 图默认优先内嵌到对应正文；只有在跨文档复用、独立高频更新、集中管理/导出，或明确图文分离时才拆到 `mydocs/diagrams/`
 
@@ -80,13 +81,13 @@
 
 当这个扩展技能与 `$backend-service-spec-skill` 一起使用时，通常会落到统一的 `mydocs/` 目录结构中。
 
-对 mixed-stack 项目来说，最值得额外说明的是 `mydocs/context/`：
+对混合技术栈项目来说，最值得额外说明的是 `mydocs/context/`：
 
 - 它不是只给后端服务看的
 - 它也不是某个 App 模块、H5 页面或 Python 子工程的私有说明页
 - 它是“当前分析范围内的横切上下文层”
 
-在 mixed-stack 场景下，`mydocs/context/` 通常承载：
+在混合技术栈场景下，`mydocs/context/` 通常承载：
 
 - 前后端接口映射
 - 网关/转发链路事实
@@ -136,6 +137,7 @@
 
 ## 建议继续阅读
 
+- [跨技术栈 References 导航](./references/README.zh-CN.md)
 - [详细使用说明](./references/extension-usage-guide.zh-CN.md)
 - [命令产物对照](./references/command-output-map.zh-CN.md)
 - [命令速查表](./references/command-output-scenario-quickref.zh-CN.md)

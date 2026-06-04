@@ -1,4 +1,4 @@
-# Cross Tech Stack Spec Skill
+# Cross-Tech-Stack Spec Skill
 
 An explicit extension skill for cross-tech-stack project analysis.
 
@@ -33,6 +33,7 @@ Use $cross-tech-stack-spec-skill to analyze this project.
 
 If the user wants a one-pass run that exercises the base workflow plus all optional extensions and generates all artifact types, see:
 
+- [Cross-Tech-Stack References Index](./references/README.md)
 - [Full Analysis Mode](../references/full-analysis-mode.md)
 - [Command Output Map](./references/command-output-map.md)
 - [Command Quick Reference](./references/command-output-scenario-quickref.md)
@@ -120,6 +121,7 @@ See the full mapping here:
 
 ## Read Next
 
+- [Cross-Tech-Stack References Index](./references/README.md)
 - [Detailed Usage Guide](./references/extension-usage-guide.md)
 - [Command Output Map](./references/command-output-map.md)
 - [Command Quick Reference](./references/command-output-scenario-quickref.md)
