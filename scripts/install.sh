@@ -11,6 +11,7 @@ Usage:
   ./scripts/install.sh codex
   ./scripts/install.sh claude /path/to/target-project
   ./scripts/install.sh cursor /path/to/target-project
+  ./scripts/install.sh opencode /path/to/target-project
 EOF
 }
 
@@ -86,6 +87,21 @@ case "$tool" in
     done
     echo "Installed Cursor project assets into: $project_root"
     echo "Included: skills/ and .cursor/rules/"
+    ;;
+
+  opencode)
+    if [[ -z "$target_path" ]]; then
+      echo "Target project path is required for OpenCode installation."
+      usage
+      exit 1
+    fi
+    project_root="$(cd "$target_path" && pwd)"
+    skills_root="$project_root/.opencode/skills"
+    mkdir -p "$skills_root"
+    copy_dir_safe "$backend_skill" "$skills_root/backend-service-spec-skill"
+    copy_dir_safe "$cross_skill" "$skills_root/cross-tech-stack-spec-skill"
+    echo "Installed OpenCode project skills into: $project_root/.opencode/skills"
+    echo "Included: .opencode/skills/"
     ;;
 
   *)

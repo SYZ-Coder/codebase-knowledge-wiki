@@ -10,7 +10,8 @@ It supports two installation styles:
 Important distinction:
 
 - `Codex` supports native skill-folder installation
-- `Claude Code / Claude`, `Cursor`, and most other AI tools usually do not have a one-click install command for this repository
+- `Claude Code / Claude`, `Cursor`, and most other AI tools usually do not have a native one-click install command for this repository
+- `OpenCode` supports project-local skill discovery, so this repository can install directly into `.opencode/skills/`
 - for those tools, the practical approach is to reference this repository through project rules, instruction files, or copied template folders
 
 ## 0. Cross-Platform One-Command Install
@@ -20,11 +21,12 @@ This repository now provides cross-platform helper scripts:
 - PowerShell: `./scripts/install.ps1`
 - Shell: `./scripts/install.sh`
 
-They support three targets:
+They support four targets:
 
 - `codex`
 - `claude`
 - `cursor`
+- `opencode`
 
 Windows examples:
 
@@ -38,6 +40,10 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-pr
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
 ```
 
 macOS / Linux examples:
@@ -54,6 +60,10 @@ bash ./scripts/install.sh claude <target-project-dir>
 bash ./scripts/install.sh cursor <target-project-dir>
 ```
 
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
 Replace `<target-project-dir>` with the root directory of the project where you want the skill files to be installed.
 
 What each command does:
@@ -61,6 +71,7 @@ What each command does:
 - `codex`: installs both skills into the local `~/.codex/skills/` directory
 - `claude`: installs both skills plus `.claude/commands/` into the target project
 - `cursor`: installs both skills plus `.cursor/rules/` into the target project
+- `opencode`: installs both skills into the target project's `.opencode/skills/` directory
 
 ## 1. Quick Choice
 
@@ -69,6 +80,7 @@ Use this table first:
 - `Codex`: copy the skill folders into the local Codex skills directory
 - `Claude Code / Claude`: no one-click install command; reference the repository from `CLAUDE.md`, `.claude/skills/`, or `.claude/commands/`
 - `Cursor`: no one-click install command; reference the repository from `.cursor/rules/`
+- `OpenCode`: install the skill folders into the target project's `.opencode/skills/` directory
 - `VS Code + AI extension`: reference the repository from project rules, prompts, or docs
 - other AI tools: use the generic integration template at the end of this guide
 
@@ -112,7 +124,33 @@ Use $backend-service-spec-skill to analyze this backend microservice project.
 Use $backend-service-spec-skill as the base workflow, and enable $cross-tech-stack-spec-skill for mixed-stack adaptation.
 ```
 
-## 3. Claude Code / Claude
+## 3. OpenCode
+
+OpenCode supports project-local skill discovery, so the simplest setup is to install the two skill folders into the target project's `.opencode/skills/` directory.
+
+One-command install:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
+```
+
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
+This copies:
+
+- `.opencode/skills/backend-service-spec-skill/`
+- `.opencode/skills/cross-tech-stack-spec-skill/`
+
+Suggested steps:
+
+1. Clone this repository.
+2. Run the install command with your target project root.
+3. Reopen the target project in OpenCode or refresh its project context.
+4. Ask OpenCode to use `backend-service-spec-skill` or `cross-tech-stack-spec-skill` according to your task.
+
+## 4. Claude Code / Claude
 
 Claude Code does not provide a one-click install command for this repository in the same sense as Codex native skills.
 
@@ -230,7 +268,7 @@ Notes:
 - If the target project has custom scripts, add their execution details to the command templates.
 - If no scripts exist, Claude Code should inspect code directly and generate `mydocs/` artifacts according to the project-local skill rules.
 
-## 4. Cursor
+## 5. Cursor
 
 Cursor also does not provide a one-click install command for this repository.
 

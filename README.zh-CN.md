@@ -133,6 +133,29 @@ bash ./scripts/install.sh cursor <target-project-dir>
 1. 重新打开目标项目，或让 Cursor 刷新项目上下文。
 2. 直接让 Cursor Agent 执行 `create_codemap`、`service_deep_dive`、`crate_router_map`、`build_domain_map` 等工作流意图。
 
+### OpenCode
+
+`OpenCode` 原生支持项目内技能发现，所以本仓库提供了针对 `.opencode/skills/` 的项目级一键接入命令：
+
+Windows：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
+```
+
+macOS / Linux：
+
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
+这会把以下内容安装到目标项目中：
+
+- `.opencode/skills/backend-service-spec-skill/`
+- `.opencode/skills/cross-tech-stack-spec-skill/`
+
+安装完成后，重新打开目标项目或刷新 OpenCode 项目上下文，即可让它发现这些项目内技能。
+
 更多安装说明：
 
 - [通用参考文档导航](./references/README.zh-CN.md)

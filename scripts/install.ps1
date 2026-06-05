@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet("codex", "claude", "cursor")]
+    [ValidateSet("codex", "claude", "cursor", "opencode")]
     [string]$Tool,
 
     [string]$TargetPath
@@ -111,5 +111,22 @@ switch ($Tool) {
 
         Write-Host "Installed Cursor project assets into: $projectRoot"
         Write-Host "Included: skills/ and .cursor/rules/"
+    }
+
+    "opencode" {
+        if (-not $TargetPath) {
+            throw "TargetPath is required for OpenCode project installation."
+        }
+
+        $projectRoot = (Resolve-Path $TargetPath).Path
+        $skillsRoot = Join-Path $projectRoot ".opencode\skills"
+
+        New-DirectoryIfMissing -Path $skillsRoot
+
+        Copy-DirectorySafe -Source $backendSkill -Destination (Join-Path $skillsRoot "backend-service-spec-skill")
+        Copy-DirectorySafe -Source $crossSkill -Destination (Join-Path $skillsRoot "cross-tech-stack-spec-skill")
+
+        Write-Host "Installed OpenCode project skills into: $projectRoot\.opencode\skills"
+        Write-Host "Included: .opencode/skills/"
     }
 }

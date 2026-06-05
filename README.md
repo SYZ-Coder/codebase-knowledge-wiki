@@ -135,6 +135,29 @@ Recommended next step:
 1. reopen the target project in Cursor, or let Cursor refresh project context
 2. ask Cursor Agent to run intents such as `create_codemap`, `service_deep_dive`, `crate_router_map`, or `build_domain_map`
 
+### OpenCode
+
+OpenCode supports project-local skill discovery, so this repository provides a one-command project setup for `.opencode/skills/`:
+
+Windows:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
+```
+
+macOS / Linux:
+
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
+This installs into the target project:
+
+- `.opencode/skills/backend-service-spec-skill/`
+- `.opencode/skills/cross-tech-stack-spec-skill/`
+
+After installation, reopen the target project in OpenCode or refresh project context so it can discover the copied project-local skills.
+
 More setup details:
 
 - [Shared References Index](./references/README.md)

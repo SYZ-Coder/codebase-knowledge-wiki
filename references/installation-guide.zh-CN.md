@@ -10,7 +10,8 @@
 重要区分：
 
 - `Codex` 支持原生技能目录安装
-- `Claude Code / Claude`、`Cursor` 以及大多数其他 AI 工具，通常都没有针对本仓库的一键安装命令
+- `Claude Code / Claude`、`Cursor` 以及大多数其他 AI 工具，通常都没有针对本仓库的原生一键安装命令
+- `OpenCode` 支持项目内技能发现，因此本仓库可以直接安装到 `.opencode/skills/`
 - 对这些工具来说，更实际的做法是通过项目规则、说明文件，或者复制模板目录来接入本仓库
 
 ## 0. 跨平台一键命令
@@ -20,11 +21,12 @@
 - PowerShell: `./scripts/install.ps1`
 - Shell: `./scripts/install.sh`
 
-支持三种目标：
+支持四种目标：
 
 - `codex`
 - `claude`
 - `cursor`
+- `opencode`
 
 Windows 示例：
 
@@ -38,6 +40,10 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 claude <target-pr
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 cursor <target-project-dir>
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
 ```
 
 macOS / Linux 示例：
@@ -54,6 +60,10 @@ bash ./scripts/install.sh claude <target-project-dir>
 bash ./scripts/install.sh cursor <target-project-dir>
 ```
 
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
 请把 `<target-project-dir>` 替换成你希望安装技能文件的目标项目根目录。
 
 每个命令会做什么：
@@ -61,6 +71,7 @@ bash ./scripts/install.sh cursor <target-project-dir>
 - `codex`：把两套技能安装到本地 `~/.codex/skills/` 目录
 - `claude`：把两套技能和 `.claude/commands/` 一起安装到目标项目
 - `cursor`：把两套技能和 `.cursor/rules/` 一起安装到目标项目
+- `opencode`：把两套技能安装到目标项目的 `.opencode/skills/` 目录
 
 ## 1. 快速选择
 
@@ -69,6 +80,7 @@ bash ./scripts/install.sh cursor <target-project-dir>
 - `Codex`：把技能目录复制到本地 Codex 技能目录
 - `Claude Code / Claude`：没有一键安装命令；通过 `CLAUDE.md`、`.claude/skills/` 或 `.claude/commands/` 接入
 - `Cursor`：没有一键安装命令；通过 `.cursor/rules/` 接入
+- `OpenCode`：把技能目录安装到目标项目的 `.opencode/skills/` 目录
 - `VS Code + AI 扩展`：通过项目规则、prompt 或文档引用本仓库
 - 其他 AI 工具：使用文末的“通用接入模板”
 
@@ -112,7 +124,33 @@ bash ./scripts/install.sh codex
 请以 $backend-service-spec-skill 为基础流程，并启用 $cross-tech-stack-spec-skill 做混合技术栈适配。
 ```
 
-## 3. Claude Code / Claude
+## 3. OpenCode
+
+`OpenCode` 支持项目内技能发现，所以最简单的接入方式，就是把两套技能安装到目标项目的 `.opencode/skills/` 目录。
+
+一键安装命令：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 opencode <target-project-dir>
+```
+
+```bash
+bash ./scripts/install.sh opencode <target-project-dir>
+```
+
+这会复制：
+
+- `.opencode/skills/backend-service-spec-skill/`
+- `.opencode/skills/cross-tech-stack-spec-skill/`
+
+建议步骤：
+
+1. 克隆本仓库。
+2. 用目标项目根目录执行安装命令。
+3. 重新打开目标项目，或刷新 OpenCode 的项目上下文。
+4. 按任务需要让 OpenCode 使用 `backend-service-spec-skill` 或 `cross-tech-stack-spec-skill`。
+
+## 4. Claude Code / Claude
 
 Claude Code 不像 Codex 原生技能那样，为这个仓库提供一键安装命令。
 
@@ -230,7 +268,7 @@ bash ./scripts/install.sh claude <target-project-dir>
 - 如果目标项目有自定义脚本，可以把执行细节补到 command 模板里。
 - 如果没有脚本，Claude Code 应直接检查代码并按项目内技能规则生成 `mydocs/` 产物。
 
-## 4. Cursor
+## 5. Cursor
 
 Cursor 也没有针对本仓库的一键安装命令。
 
